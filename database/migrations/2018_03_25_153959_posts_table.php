@@ -17,7 +17,7 @@ class PostsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('title');
-            $table->string('body');
+            $table->longText('body');
             $table->integer('user_id');
             //$table->foreign('user_id')->references('id')->on('users');
         });
