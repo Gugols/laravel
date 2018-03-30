@@ -36,3 +36,17 @@ Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delet
 // OAuth Routes
 Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider');
 Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCallback');
+
+// Profile views
+
+// set profile type
+Route::get('/profile/set-type', 'ProfileController@create');
+
+// actually create the profile
+Route::post('/profile', 'ProfileController@store')->name('profile.store');
+
+// Edit profile page
+Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
+
+// Send editted form data
+// Route::put('/profile/edit', 'ProfileController@update');

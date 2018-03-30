@@ -10,7 +10,7 @@ use Auth;
 class postController extends Controller
 {
     public function create() {
-		return view('pages.posts.create-post');
+		  return view('pages.posts.create-post');
     }
 
     public function store(Request $request) {
@@ -25,11 +25,11 @@ class postController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = Auth::id();
-		//$post->body = request(['body']);
-		$post->save();
+        //$post->body = request(['body']);
+        $post->save();
 
-    	//Create a new post using the request data . saving it to the database and then redirect.
-		return redirect('/posts/new');
+          //Create a new post using the request data . saving it to the database and then redirect.
+		    return redirect('/posts/new');
 
     }
 

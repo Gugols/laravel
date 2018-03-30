@@ -35,4 +35,10 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    // User can have one profile
+
+    public function profile() {
+        return $this->hasOne(Profile::class);
+    }
+
 }

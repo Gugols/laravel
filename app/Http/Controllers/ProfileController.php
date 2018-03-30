@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Profile;
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -25,6 +26,9 @@ class ProfileController extends Controller
     public function create()
     {
         //
+
+        return view('pages.profiles.create-profile');
+
     }
 
     /**
@@ -35,7 +39,23 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // lets create a new profile
+        
+           // dd($request->all());
+
+    $this->validate(request(), [
+        'type' => 'required'
+        ]);
+        
+        $profile = new Profile;
+        $profile->display_name = Auth::user()->name;
+        $profile->profile_type = $request->input('type');
+        $profile->user_id = Auth::id();
+        $profile->save();
+
+          //Create a new profile using the request data . saving it to the database and then redirect.
+		    return redirect('/');
+
     }
 
     /**
