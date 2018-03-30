@@ -32,3 +32,7 @@ Route::get('/posts/delete/{id}', 'PostController@destroyShow');
 Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delete');
 
 //Route::delete('/posts/delete/{id}', 'PostController@destroy');
+
+// OAuth Routes
+Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider');
+Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCallback');
