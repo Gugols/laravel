@@ -48,5 +48,9 @@ Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCa
 // Edit profile page
 Route::get('/user/{id}/edit', 'UserController@edit')->name('user.edit');
 
+Route::get('/user/{id}/select-type', 'UserController@editType')->name('user.select-type');
+
+Route::put('/user/{id}/select-type', 'UserController@editTypeUpdate')->name('user.select-type-update');
+
 // Send editted form data
 // Route::put('/profile/edit', 'ProfileController@update');

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\User;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -35,5 +37,18 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function authenticated() {
+
+        $user = User::find(Auth::user()->id);
+
+        if(!$user->profile_type)
+        {
+            //return redirect('/user/{id}/select-type');
+            return redirect()->route('user.select-type', ['id' => $user->id]);
+        } 
+
+        return redirect('home');
     }
 }

@@ -93,6 +93,29 @@ class UserController extends Controller
 
     }
 
+    public function editType($id)
+    {
+        $user = User::find($id);
+        return view('pages.users.user-type-select')->with(['user'=>$user]);
+    }
+
+    public function editTypeUpdate(Request $request, $id)
+    {
+
+            //dd($request->all());
+            $this->validate(request(), [
+                'profile_type' => 'required|integer|between:1,3',
+            ]);
+
+        $user = User::find($id);
+        $user->profile_type = $request->input('profile_type');
+        $user->save();
+        return redirect('home');
+
+       // dd($user);
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *
