@@ -35,6 +35,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            // check if logged in. If so - check if Profile Type has been set. If not - redirect to set-type route.
+            \App\Http\Middleware\CheckProfileType::class,
         ],
 
         'api' => [

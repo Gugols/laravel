@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -96,6 +97,15 @@ class UserController extends Controller
     public function editType($id)
     {
         $user = User::find($id);
+
+        if(Auth::check()) {
+
+            if($user->profile_type)
+            {
+                return redirect('home');
+            }
+        }
+
         return view('pages.users.user-type-select')->with(['user'=>$user]);
     }
 
