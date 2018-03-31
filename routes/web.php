@@ -40,13 +40,13 @@ Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCa
 // Profile views
 
 // set profile type
-Route::get('/profile/set-type', 'ProfileController@create');
+//Route::get('/user/set-type', 'UserController@create')->name('user.set-type');
 
 // actually create the profile
-Route::post('/profile', 'ProfileController@store')->name('profile.store');
+ Route::put('/user/{id}', 'UserController@update')->name('user.update');
 
 // Edit profile page
-Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
+Route::get('/user/{id}/edit', 'UserController@edit')->name('user.edit');
 
 // Send editted form data
 // Route::put('/profile/edit', 'ProfileController@update');

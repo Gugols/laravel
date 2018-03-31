@@ -1,5 +1,5 @@
 @extends('layouts.layout')
 
 @section('content')
-    @include('partials.profile-select-type')
+    @include('partials.user-edit-form')
 @endsection

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Profile;
 use Illuminate\Http\Request;
-use Auth;
 
-class ProfileController extends Controller
+use App\User;
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,9 +26,6 @@ class ProfileController extends Controller
     public function create()
     {
         //
-
-        return view('pages.profiles.create-profile');
-
     }
 
     /**
@@ -39,32 +36,16 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        // lets create a new profile
-        
-           // dd($request->all());
-
-    $this->validate(request(), [
-        'type' => 'required'
-        ]);
-        
-        $profile = new Profile;
-        $profile->display_name = Auth::user()->name;
-        $profile->profile_type = $request->input('type');
-        $profile->user_id = Auth::id();
-        $profile->save();
-
-          //Create a new profile using the request data . saving it to the database and then redirect.
-		    return redirect('/');
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Profile $profile)
+    public function show($id)
     {
         //
     }
@@ -72,33 +53,53 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Profile $profile)
+    public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('pages.users.edit-user')->with(['user'=>$user]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Profile $profile)
+    public function update(Request $request, $id)
     {
-        //
+
+            $this->validate(request(), [
+                'name' => 'required|min:2',
+            ]);
+
+        //dd($request->all(), $id);
+        $user = User::find($id);
+        $user->name = $request->input('name');
+        //dd($user);
+        $user->email = $request->input('email');
+        $user->phone = $request->input('phone');
+        $user->school = $request->input('school');
+        $user->profile_type = $request->input('profile_type');
+        $user->short_description = $request->input('short_description');
+        $user->description = $request->input('description');
+        $user->save();
+        return redirect('home');
+
+       // dd($user);
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Profile $profile)
+    public function destroy($id)
     {
         //
     }

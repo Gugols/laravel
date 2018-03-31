@@ -20,8 +20,14 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('provider')->nullable();;
             $table->string('provider_id')->nullable();;
+            $table->string('profile_type')->nullable();
+            $table->string('phone')->nullable();;
+            $table->string('school')->nullable();;
+            $table->longtext('short_description')->nullable();;
+            $table->longtext('description')->nullable();;
             $table->rememberToken();
             $table->timestamps();
+            
         });
     }
 

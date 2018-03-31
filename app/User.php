@@ -14,7 +14,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
+    protected $guarded = [
         'name', 'email', 'password', 'provider', 'provider_id',
     ];
 
@@ -33,12 +33,6 @@ class User extends Authenticatable
     */
     public function posts() {
         return $this->hasMany(Post::class);
-    }
-
-    // User can have one profile
-
-    public function profile() {
-        return $this->hasOne(Profile::class);
     }
 
 }
