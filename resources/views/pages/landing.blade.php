@@ -629,9 +629,49 @@
             </div>
             </section>
         <!-- end: Services -->
+
+        <section id="section5" class="text-light p-t-150 p-b-150 background-overlay" data-parallax-image="images/parallax/12.jpg"><div class="parallax-container scrolly-invisible" data-velocity="-.090" style="background: url(&quot;https://c1.staticflickr.com/8/7372/15815712043_429778e7f0_b.jpg&quot;) -209.706px;"></div>
+            <div class="container">
+            <div class="row">
+            <div class="col-md-3">
+            <div class="text-center">
+            <div class="icon"><i class="fa fa-3x fa-code"></i></div>
+            <div class="counter"> <span data-speed="3000" data-refresh-interval="50" data-to="12416" data-from="600" data-seperator="true">12416</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p>LINES OF CODE</p>
+            </div>
+            </div>
+            
+            <div class="col-md-3">
+            <div class="text-center">
+            <div class="icon"><i class="fa fa-3x fa-coffee"></i></div>
+            <div class="counter"> <span data-speed="4500" data-refresh-interval="23" data-to="365" data-from="100" data-seperator="true">365</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p>CUPS OF COFFEE</p>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="text-center">
+            <div class="icon"><i class="fa fa-3x fa-rocket"></i></div>
+            <div class="counter"> <span data-speed="3000" data-refresh-interval="12" data-to="114" data-from="50" data-seperator="true">114</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p>FINISHED PROJECTS</p>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="text-center">
+            <div class="icon"><i class="fa fa-3x fa-smile-o"></i></div>
+            <div class="counter"> <span data-speed="4550" data-refresh-interval="50" data-to="14825" data-from="48" data-seperator="true">14825</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p>SATISFIED CLIENTS</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
         
         <!-- Team -->
-        <section id="section5" class="background-grey p-t-100 p-b-100">
+        <section id="section6" class="background-grey p-t-100 p-b-100">
             <div class="container">
                 <div class="heading section-title">
                         <h2>Meet our Team</h2>
@@ -641,7 +681,7 @@
                     <div class="col-md-3">
                         <div class="team-member">
                             <div class="team-image">
-                                <img src="images/team/6.jpg">
+                                <img src="images/team/12.jpg">
                             </div>
                             <div class="team-desc">
                                 <h3>Alea Smith</h3>
@@ -671,7 +711,7 @@
                     <div class="col-md-3">
                         <div class="team-member">
                             <div class="team-image">
-                                <img src="images/team/7.jpg">
+                                <img src="images/team/12.jpg">
                             </div>
                             <div class="team-desc">
                                 <h3>Ariol Doe</h3>
@@ -701,7 +741,7 @@
                     <div class="col-md-3">
                         <div class="team-member">
                             <div class="team-image">
-                                <img src="images/team/8.jpg">
+                                <img src="images/team/12.jpg">
                             </div>
                             <div class="team-desc">
                                 <h3>Emma Ross</h3>
@@ -731,7 +771,7 @@
                     <div class="col-md-3">
                         <div class="team-member">
                             <div class="team-image">
-                                <img src="images/team/9.jpg">
+                                <img src="images/team/12.jpg">
                             </div>
                             <div class="team-desc">
                                 <h3>Victor Loda</h3>
