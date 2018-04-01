@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
             $u->posts()->save(factory(App\Post::class)->make());
             $u->posts()->save(factory(App\Post::class)->make());
         });
+
+        $this->call(RolesAndPermissionsSeeder::class);
     }
 }
