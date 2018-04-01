@@ -4,24 +4,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo">
+    <meta name="author" content="Davis Are" />
+    <meta name="description" content="A social network where students get the support to fullfill their ultimate potential">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>Maecenas | Student social network</title>
     <!-- Stylesheets & Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800|Merriweather:300" rel="stylesheet" type="text/css" />
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-
-
-    <!-- Template color -->
-    <link href="css/color-variations/red.css" rel="stylesheet" type="text/css" media="screen">
-
-    <!-- CSS  STYLE -->
-    <link rel="stylesheet" type="text/css" href="homepages/event/css/event-style.css" media="screen" />
-
-</head>
+    <link href="css/responsive.css" rel="stylesheet"> </head>
 
 <body>
 
@@ -29,14 +20,15 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
+
         <!-- Header -->
-        <header id="header" class="header-transparent header-modern dark">
+        <header id="header" class="header-transparent header-fullwidth header-plain dark">
             <div id="header-wrap">
                 <div class="container">
                     <!--Logo-->
                     <div id="logo">
-                        <a href="index.html" class="logo" data-dark-logo="homepages/event/images/logo-dark.png">
-                            <img src="homepages/event/images/logo.png" alt="Polo Logo">
+                        <a href="index.html" class="logo" data-dark-logo="images/logo-dark.png">
+                            <img src="images/logo.png" alt="Polo Logo">
                         </a>
                     </div>
                     <!--End: Logo-->
@@ -52,32 +44,8 @@
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
-                            <li>
-                                <!--top search-->
-                                <a id="top-search-trigger" href="#" class="toggle-item">
-                                    <i class="fa fa-search"></i>
-                                    <i class="fa fa-close"></i>
-                                </a>
-                                <!--end: top search-->
-                            </li>
-                            <li class="hidden-xs">
-                                <!--shopping cart-->
-                                <div id="shopping-cart">
-                                    <a href="shop-cart.html">
-                                        <span class="shopping-cart-items">8</span>
-
-                                        <i class="fa fa-shopping-cart"></i></a>
-                                </div>
-                                <!--end: shopping cart-->
-                            </li>
-                            <li>
-                                <div class="topbar-dropdown">
-                                    <a class="title"><i class="fa fa-globe"></i></a>
-                                    <div class="dropdown-list">
-                                        <a class="list-entry" href="#">French</a>
-                                        <a class="list-entry" href="#">Spanish</a>
-                                    </div>
-                                </div>
+                            <li class="visible-md visible-lg">
+                                <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-rounded btn-light">Get Started</a>
                             </li>
                         </ul>
                     </div>
@@ -90,202 +58,11 @@
                     <!--end: Navigation Resposnive Trigger-->
 
                     <!--Navigation-->
-                    <div id="mainMenu" class="light">
+                    <div id="mainMenu" class="menu-center light">
                         <div class="container">
                             <nav>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li class="dropdown"> <a href="#">Features</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-heart"></i>Headers</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="header.html">Light</a></li>
-                                                    <li><a href="header-dark.html">Dark</a></li>
-                                                    <li><a href="header-transparent.html">Transparent</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Semi Transparent</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-light-transparent.html">Light</a></li>
-                                                            <li><a href="header-dark-transparent.html">Dark</a></li>
-                                                            <li><a href="header-colored-transparent.html">Colored</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="header-colored.html">Colored</a></li>
-                                                    <li><a href="header-fullwidth.html">Fullwidth</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Modern</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-modern.html">Light</a></li>
-                                                            <li><a href="header-modern-dark.html">Dark</a></li>
-                                                            <li><a href="header-modern-transparent.html">Transparent</a></li>
-                                                            <li><a href="header-modern-colored.html">Colored</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="header-mini.html">Mini</a></li>
-                                                    <li><a href="header-static.html">Static</a></li>
-                                                    <li><a href="header-no-sticky.html">No Sticky</a></li>
-                                                    <li><a href="header-sticky-responsive.html">Sticky Responsive</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Logo Positions</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-logo.html">Left</a></li>
-                                                            <li><a href="header-logo-right.html">Right</a></li>
-                                                            <li><a href="header-logo-center.html">Center</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Menu Positions</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-menu-left.html">Left</a></li>
-                                                            <li><a href="header-menu-right.html">Right</a></li>
-                                                            <li><a href="header-menu-center.html">Center</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Topbar</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="header-topbar.html">Light</a></li>
-                                                            <li><a href="header-topbar-dark.html">Dark</a></li>
-                                                            <li><a href="header-topbar-transparent.html">Transparent</a></li>
-                                                            <li><a href="header-topbar-colored.html">Colored</a></li>
-                                                            <li><a href="header-topbar-fullwidth.html">Fullwidth</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="header-under.html">Under Slider</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-navicon"></i>Main Menu<span class="label label-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="menu.html">Default</a></li>
-                                                    <li><a href="menu-split.html">Split Menu</a></li>
-                                                    <li><a href="menu-sub-title.html">Sub Title Menu</a></li>
-                                                    <li><a href="menu-slide.html">Slide Menu</a></li>
-                                                    <li><a href="menu-overlay.html">Overlay Menu</a></li>
-                                                    <li><a href="menu-creative.html">Creative Menu</a></li>
-                                                    <li><a href="menu-lines.html">Lines Menu</a></li>
-                                                    <li class="dropdown-submenu"><a href="#">Outline</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="menu-outline.html">Default</a></li>
-                                                            <li><a href="menu-outline-dark.html">Dark</a></li>
-                                                            <li><a href="menu-outline-light.html">Light</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Rounded</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="menu-rounded.html">Default</a></li>
-                                                            <li><a href="menu-rounded-dark.html">Dark</a></li>
-                                                            <li><a href="menu-rounded-light.html">Light</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu"><a href="#">Positions</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="menu-left.html">Left Aligned</a></li>
-                                                            <li><a href="menu-center.html">Center Aligned</a></li>
-                                                            <li><a href="menu-right.html">Right Aligned</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="menu-dots.html">Dots Menu</a></li>
-                                                    <li><a href="menu-one-page.html">One Page Menu</a></li>
-                                                    <li><a href="menu-hover-background.html">Hover Background</a></li>
-                                                    <li><a href="menu-button.html">Button Version</a></li>
-                                                    <li><a href="menu-social-icons.html">Social Icons Version</a></li>
-                                                    <li><a href="menu-onclick.html">OnClick Open</a></li>
-                                                    <li><a href="menu-rounded-dropdown.html">Rounded Dropdown</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-sliders"></i>Sliders</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="slider-revolution-slider.html">Revolution Slider</a></li>
-                                                    <li><a href="slider-owl-slider.html">OWL Slider</a></li>
-                                                    <li><a href="slider-static-media-image.html">Fullscreen Image</a></li>
-                                                    <li><a href="slider-static-media-parallax.html">Fullscreen Parallax</a></li>
-                                                    <li><a href="slider-static-media-text-rotator.html" class="current">Fullscreen Text Rotator</a></li>
-                                                    <li><a href="slider-static-media-video.html">Fullscreen HTML5 Video</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-star"></i>Page title</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="page-title-classic.html">Classic version</a></li>
-                                                    <li><a href="page-title.html">Image background</a> </li>
-                                                    <li><a href="page-title-video.html">Video background</a> </li>
-                                                    <li><a href="page-title-pattern.html">Pattern background</a> </li>
-                                                    <li><a href="page-title-background-color.html">Colored background</a> </li>
-                                                    <li><a href="page-title-default-header.html">Default header</a></li>
-                                                    <li><a href="page-title-animated.html">Animated</a></li>
-                                                    <li><a href="page-title-center.html">Center Aligned</a></li>
-                                                    <li><a href="page-title-right.html">Right Aligned</a></li>
-                                                    <li><a href="page-title.html">Left Aligned</a></li>
-
-
-                                                    <!--<li><a href="page-title-small.html">Small version</a> </li>-->
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-align-left"></i>Page Menu<span class="label label-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="page-menu.html">Rounded</a> </li>
-                                                    <li><a href="page-menu-outline.html">Outline</a> </li>
-                                                    <li><a href="page-menu-lines.html">Lines</a> </li>
-                                                    <li><a href="page-menu-classic.html">Classic</a> </li>
-                                                    <li><a href="page-menu-line-bottom.html">Line Bottom</a> </li>
-                                                    <li><a href="page-menu-light.html">Light</a> </li>
-                                                    <li><a href="page-menu-dark.html">Dark</a> </li>
-                                                    <li><a href="page-menu-creative.html">Creative</a> </li>
-                                                    <li><a href="page-menu-colored-background.html">Colored Background</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-columns"></i>Side Panel</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="side-panel.html">Push</a> </li>
-                                                    <li><a href="side-panel-reval.html">Reval</a></li>
-                                                    <li><a href="side-panel-slide-in.html">Slide In</a></li>
-                                                    <li><a href="side-panel-static.html">Static</a></li>
-                                                    <li><a href="side-panel-dark.html">Dark version</a></li>
-                                                    <li><a href="side-panel-right.html">Push Right</a> </li>
-                                                    <li><a href="side-panel-reval-right.html">Reval Right</a></li>
-                                                    <li><a href="side-panel-slide-in-right.html">Slide In Right</a></li>
-                                                    <li><a href="side-panel-static-right.html">Static Right</a></li>
-
-                                                </ul>
-                                            </li>
-                                            <li><a href="widgets.html"><i class="fa fa-th"></i>Widgets </a></li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-th-list"></i>Sidebars</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="sidebar.html">Left aligned</a> </li>
-                                                    <li><a href="sidebar-right.html">Right aligned</a> </li>
-                                                    <li><a href="sidebar-both.html">Both Sidebars</a> </li>
-                                                    <li><a href="sidebar-modern.html">Modern</a> </li>
-                                                    <li><a href="sidebar-modern-right.html">Modern Right</a> </li>
-                                                    <li><a href="sidebar-modern-both.html">Modern Both Sidebars</a> </li>
-
-                                                </ul>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-window-minimize"></i>Footers</a></li>
-                                            <li><a href="page-loaders.html"><i class="fa fa-spinner"></i>Page Loaders<span class="label label-danger">NEW</span></a></li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-expand"></i>Modal Auto Open<span class="label label-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="modal-auto-open.html">Sample Text</a></li>
-                                                    <li><a href="modal-auto-open-newsletter.html">Newsletter</a></li>
-                                                    <li><a href="modal-auto-open-shop.html">Shop Sale</a></li>
-                                                    <li><a href="modal-auto-open-login.html">Login Form</a></li>
-                                                    <li><a href="modal-auto-open-audio.html">Audio</a></li>
-                                                    <li><a href="modal-auto-open-video.html">HTML5 Video</a></li>
-                                                    <li><a href="modal-auto-open-youtube.html">YouTube</a></li>
-                                                    <li><a href="modal-auto-open-vimeo.html">Vimeo</a></li>
-                                                    <li><a href="modal-auto-open-iframe.html">Iframe</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-bullhorn"></i>Cookie Notify<span class="label label-danger">NEW</span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="cookie-notify.html">Top position</a> </li>
-                                                    <li><a href="cookie-notify-bottom.html">Bottom position</a> </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#"><i class="fa fa-tags"></i>Menu Labels</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Label (new)<span class="label label-default">NEW</span></a> </li>
-                                                    <li><a href="#">Label (hot)<span class="label label-danger">HOT</span></a> </li>
-                                                    <li><a href="#">Label (popular)<span class="label label-success">POPULAR</span></a> </li>
-                                                    <li><a href="#">Label (sale)<span class="label label-warning">SALE</span></a> </li>
-                                                    <li><a href="#">Label (info)<span class="label label-info">INFO</span></a> </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li class="dropdown mega-menu-item"> <a href="#">Elements</a>
                                         <ul class="dropdown-menu" style="background-image: url('images/shortcode-megamenu-bg.png');">
                                             <li class="mega-menu-content">
@@ -605,8 +382,7 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"> <a href="#">Blog</a>
+                                    </li> <li class="dropdown mega-menu-item"> <a href="#">Blog</a>
                                         <ul class="dropdown-menu">
                                             <li class="mega-menu-content">
                                                 <div class="row">
@@ -737,16 +513,16 @@
                                                             <li> <a href="shop-single-product-sidebar-both.html">Both Sidebars</a> </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-md-2-5 p-l-0">
+<div class="col-md-2-5 p-l-0">
 
-                                                        <h4 class="text-green">BIG SALE <small>Up to</small></h4>
+                                        <h4 class="text-green">BIG SALE <small>Up to</small></h4>
 
-                                                        <h2 class="text-large text-green lh80 m-b-30">70%</h2>
-                                                        <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis ipsum dolor sit amet lacinia faucibus.</p>
+                                        <h2 class="text-large text-green lh80 m-b-30">70%</h2>
+                                        <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis ipsum dolor sit amet lacinia faucibus.</p>
 
-                                                        <a class="btn btn-shadow btn-rounded btn-block">SHOP NOW!</a><small class="t300"><p class="text-center m-0"><em>* Limited time Offer</em></p></small>
-
-                                                    </div>
+                                        <a class="btn btn-shadow btn-rounded btn-block">SHOP NOW!</a><small class="t300"><p class="text-center m-0"><em>* Limited time Offer</em></p></small>
+                          
+</div>
                                                 </div>
                                             </li>
                                         </ul>
@@ -756,306 +532,112 @@
                         </div>
                     </div>
                     <!--end: Navigation-->
+                    
+                     <!--Dots Menu -->
+                    <nav id="dotsMenu">
+                        <ul>
+                            <li><a href="#slider"><span>Home</span></a></li>
+                            <li><a href="#section2"><span>About Us</span></a></li>
+                            <li><a href="#section4"><span>Services</span></a></li>
+                            <li><a href="#section5"><span>Team Members</span></a></li>
+                            <li><a href="#section6"><span>Blog</span></a></li>
+                            <li><a href="#section7"><span>Contact Us</span></a></li>
+                        </ul>
+                    </nav>
+                    <!--End: Dots Menu -->
                 </div>
             </div>
         </header>
         <!-- end: Header -->
 
-        <!-- SECTION IMAGE FULLSCREEN -->
-        <section id="slider" class="text-center parallax p-t-200 p-b-100 text-light background-overlay" style="background-image:url(homepages/event/images/1.jpg);">
-            <div class="container">
-                <div data-animation="fadeInUp" class="text-center">
-                    <div class="text-large">MWC EVENT</div>
-                    <div class="text-medium">WILL BE OPEN IN:</div>
-                </div>
 
+        <!-- Inspiro Slider -->
+        <div id="slider" class="inspiro-slider slider-fullscreen arrows-large arrows-creative dots-creative" data-height-xs="360">
 
-                <div class="countdown medium rectangle countdown-light m-b-40" data-countdown="2019/09/19 12:34:56" data-animation="fadeInUp"></div>
-
-                <div data-animation-delay="600" data-animation="fadeInUp">
-
-                    <p class="lead">Mobile World Congress (MWC) is the world’s largest annual gathering for the mobile industry, organised by the GSMA, and held in the Mobile World Capital: Barcelona, Spain.
-
-                    </p>
-                    <a class="btn btn-red">APPLY NOW</a>
-                </div>
-            </div>
-
-        </section>
-        <!-- end: SECTION IMAGE FULLSCREEN -->
-
-        <!-- EVENT INFO BOX -->
-        <div class="event-info-box">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="event-info-icon"><i class="fa fa-calendar fa-2x"></i></div>
-                        <div class="event-info-content">
-                            <div class="info-title">DATE</div>
-                            <div class="info-description">28-31 OCT 2015</div>
+            <!-- Slide 1 -->
+            <div class="slide background-overlay-gradient-colored kenburns" style="background-image:url('https://thejordanvalley.files.wordpress.com/2014/08/snowy_mountains_and_fog_filled_valley-wallpaper-1920x1080.jpg');">
+                <div class="container">
+                    <div class="slide-captions text-center">
+                        <!-- Captions -->
+                        <h1 data-caption-animation="zoom-out">Maecenas</h1>
+                        <p class="lead">Where students get the support to fullfill their ultimate potential</p>
+                        <div data-caption-animation="zoom-out">
+                            <a href="https://www.youtube.com/watch?v=nrJtHemSPW4" data-lightbox="iframe" class="play-button"><i class="fa fa-play"></i></a>
                         </div>
+                        <!-- end: Captions -->
                     </div>
-                    <!-- Item 01 -->
-
-                    <div class="col-md-3">
-                        <div class="event-info-icon"><i class="fa fa-map-marker fa-2x"></i></div>
-                        <div class="event-info-content">
-                            <div class="info-title">LOCATION</div>
-                            <div class="info-description">Avda. Reina Maria Cristina, s/n 08004 Barcelona</div>
-                        </div>
-                    </div>
-                    <!-- Item 02 -->
-
-                    <div class="col-md-3">
-                        <div class="event-info-icon"><i class="fa fa-group fa-2x media-object"></i></div>
-                        <div class="event-info-content">
-                            <div class="info-title">TICKETS</div>
-                            <div class="info-description">1800 Tickets</div>
-
-                        </div>
-                    </div>
-                    <!-- Item 03 -->
-
-                    <div class="col-md-3">
-                        <div class="event-info-icon"><i class="fa fa-microphone fa-2x"></i></div>
-                        <div class="event-info-content">
-                            <div class="info-title">SPEAKERS</div>
-                            <div class="info-description">120 Speakers</div>
-                        </div>
-                    </div>
-                    <!-- Item 04 -->
                 </div>
             </div>
+            <!-- end: Slide 1 -->
         </div>
-        <!-- end: EVENT INFO BOX -->
+        <!--end: Inspiro Slider -->
+       <!-- Our Work -->
 
-        <!-- APPLY / REGISTER FORM -->
-        <section id="section2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="heading m-b-40">
-                            <h2>MWC EVENT</h2>
-                            <span class="lead">Create amam ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
-                        </p>
-                        <p> Ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Morbi sagittis, sem quis lacinia faucibus.
-                        </p>
-                        <div class="seperator">EVENT INFO NUMBERS</div>
-                        <div class="row">
-                            <div class="col-md-3">
+        <!-- end: Our Work -->
 
-                                <div class="text-center">
-                                    <div class="counter small"> <span data-speed="3000" data-refresh-interval="50" data-to="12416" data-from="600" data-seperator="true"></span> </div>
-                                    <p>LINES OF CODE</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-
-                                <div class="text-center">
-                                    <div class="counter small"> <span data-speed="4500" data-refresh-interval="23" data-to="365" data-from="100" data-seperator="true"></span> </div>
-                                    <p>CUPS OF COFFEE</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-
-                                <div class="text-center">
-                                    <div class="counter small"> <span data-speed="3000" data-refresh-interval="12" data-to="114" data-from="50" data-seperator="true"></span> </div>
-                                    <p>FINISHED PROJECTS</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-
-                                <div class="text-center">
-                                    <div class="counter small"> <span data-speed="4550" data-refresh-interval="50" data-to="14825" data-from="48" data-seperator="true"></span> </div>
-                                    <p>SATISFIED CLIENTS</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 text-light" style="background-color:#111;">
-                        <div class="heading p-20 m-b-0">
-                            <h2 class="text-colored">EVENT REGISTER</h2>
-                            <span class="text-light">Create amam ipsum dolor sit amet, consectetur adipiscing elit.
-</span>
-                        </div>
-                        <form class="widget-contact-form text-center" action="include/event-register-form.php" role="form" method="post">
-                                <div class="col-sm-12">
-                                    <input type="text" aria-required="true" name="widget-contact-form-name" class="form-control required name" placeholder="Your Name*">
-                                </div>
-                                <div class="col-sm-12">
-                                    <input type="text" aria-required="true" name="widget-contact-form-phone" class="form-control required phone" placeholder="Your Phone Number*">
-                                </div>
-                                <div class="col-sm-12">
-                                    <input type="email" aria-required="true" name="widget-contact-form-email" class="form-control required email" placeholder="Your Email">
-                                </div>
-                                <div class="col-sm-12">
-                                        <select aria-required="true" name="widget-contact-form-ticket-type" class="form-control required ticket-type">
-                                            <option selected>Ticket Type</option>
-                                            <option>Vip</option>
-                                            <option>Elite</option>
-                                            <option>Standard</option>
-                                        </select>
-                                </div>
-                                <div class="col-sm-12">
-                                        <select aria-required="true" name="widget-contact-form-day-pass" class="form-control required day-pass">
-                                            <option selected>Day Pass</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>                                                
-                                            <option>7</option>
-                                        </select>
-                                </div>
-                            <button class="btn btn-danger" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;APPLY NOW</button>
-                        </form>
-                        <p class="p-20"><b>Note:</b> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-
-                    </div>
-
-                </div>
+        <!-- Our numbers -->
+        <section id="section2" class="image-block no-padding">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6" style="height:609px;background:url(homepages/corporate/images/2.jpg) 50% 50% / cover no-repeat;">
             </div>
-        </section>
-        <!-- end: APPLY / REGISTER FORM -->
+            <div class="col-md-6">
+            <div class="heading heading text-left">
+            <h2>Students</h2>
+            <span class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+            </span>
+            </div>
+            <a href="#" class="btn btn-outline btn-dark"><span>Learn More</span></a>
+            </div>
+            </div>
+            </div>
+            </section>
 
-        <!-- SCHEDULE -->
-        <section>
-            <div class="container">
-
-                <div class="heading m-b-40">
-                    <h2>Event Schedule</h2>
-                    <span class="lead">Create amam ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                </div>
-                <div class="tabs color justified p-r-20" id="tabs-003">
-                    <ul class="tabs-navigation">
-                        <li class="active"><a href="#day1"><strong>Day 01</strong> <br>17.10.2015</a></li>
-                        <li><a href="#day2"><strong>Day 02</strong> <br>18.10.2015</a></li>
-                        <li><a href="#day3"><strong>Day 03</strong> <br>19.10.2015</a></li>
-                        <li><a href="#day4"><strong>Day 04</strong> <br>20.10.2015</a></li>
-                    </ul>
-                    <div class="tabs-content">
-                        <div id="day1" class="tab-pane active">
-
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 09:00 - 10:45</span>
-                                <h5>Juna Doe</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                            </div>
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 11:00 - 11:45</span>
-                                <h5>Alea Grande</h5>
-                                <p class="m-b-0">Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
-                                <h5>John Smith</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-
-
-
-                        </div>
-                        <div id="day2" class="tab-pane">
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 11:00 - 11:45</span>
-                                <h5>Alea Grande</h5>
-                                <p class="m-b-0">Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
-                                <h5>John Smith</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 09:00 - 10:45</span>
-                                <h5>Juna Doe</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                            </div>
-
-
-                        </div>
-                        <div id="day3" class="tab-pane">
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
-                                <h5>John Smith</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 11:00 - 11:45</span>
-                                <h5>Alea Grande</h5>
-                                <p class="m-b-0">Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
-                                <h5>John Smith</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 09:00 - 10:45</span>
-                                <h5>Juna Doe</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                            </div>
-                        </div>
-                        <div id="day4" class="tab-pane">
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 11:00 - 11:45</span>
-                                <h5>Alea Grande</h5>
-                                <p class="m-b-0">Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
-                                <h5>John Smith</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                            </div>
-
-                            <div class="p-10 border-bottom">
-                                <span><i class="fa fa-clock-o"></i> 09:00 - 10:45</span>
-                                <h5>Juna Doe</h5>
-                                <p class="m-b-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                            </div>
-                        </div>
-
+        <section id="section3" class="image-block no-padding">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="heading heading text-left">
+                    <h2>Compangies & Organizations</h2>
+                    <span class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci.
+                    </span>
                     </div>
-                </div>
-
-
-
-
+                    <a href="#" class="btn btn-outline btn-dark"><span>Learn More</span></a>
+                    </div>
+            <div class="col-md-6" style="height:609px;background:url(homepages/corporate/images/1.jpg) 50% 50% / cover no-repeat;">
             </div>
-        </section>
-        <!-- end: SCHEDULE -->
-
-
-        <!-- end: CALL TO ACTION -->
-        <div class="call-to-action call-to-action-colored background-colored p-t-60 p-b-60 m-b-0">
-            <div class="container">
-                <div class="col-md-10">
-                    <h3>Ready to buy POLO Template?</h3>
-                    <p>This is a simple hero unit, a simple call-to-action-style component for calling extra attention to featured content.</p>
-                </div>
-                <div class="col-md-2"> <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-light btn-outline">Buy POLO</a> </div>
             </div>
-        </div>
-        <!-- end: CALL TO ACTION -->
+            </div>
+            </section>
+        <!-- end: Our numbers -->
 
-        <!-- SPEAKERS -->
-        <section id="section4" class="background-grey">
-
+        <!-- Services -->
+        <section id="section4" class="image-block no-padding">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6" style="height:609px;background:url(homepages/corporate/images/3.jpg) 50% 50% / cover no-repeat;">
+            </div>
+            <div class="col-md-6">
+            <div class="heading heading text-left">
+            <h2>Universities</h2>
+            <span class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+            </span>
+            </div>
+            <a href="#" class="btn btn-outline btn-dark"><span>Learn More</span></a>
+            </div>
+            </div>
+            </div>
+            </section>
+        <!-- end: Services -->
+        
+        <!-- Team -->
+        <section id="section5" class="background-grey p-t-100 p-b-100">
             <div class="container">
-                <div class="heading">
-                    <h2>SPEAKERS</h2>
-                    <span class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span>
-                </div>
-
-                <div class="row team-members">
+                <div class="heading section-title">
+                        <h2>Meet our Team</h2>
+                        <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare.</p>
+                    </div>
+               <div class="row team-members team-members-circle m-b-40">
                     <div class="col-md-3">
                         <div class="team-member">
                             <div class="team-image">
@@ -1175,147 +757,250 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </div> 
                 </div>
             </div>
         </section>
-        <!-- end: SPEAKERS -->
-
-        <!-- SUBSCRIBE -->
-        <section class="text-center background-image text-light p-t-150 p-b-150 background-overlay" style="background-image:url(homepages/event/images/parallax/1.jpg);">
-
+        <!-- end: Team -->
+        
+        <!-- Know more -->
+        <section id="section6">
             <div class="container">
-                <div class="col-md-6 center">
-                    <div data-animation="fadeInUp" class="text-center">
-                        <div class="text-medium">SUBSCRIBE</div>
+                <div class="row">
+                    <div class="col-md-10 center text-center">
+                        <h4 class="m-b-10">Know More</h4>
+                        <h2>About Our Company</h2>
+                        <p class="lead m-b-60">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.
+                        </p>
                     </div>
-
-                    <form class="widget-subscribe-form" action="include/subscribe-form.php" role="form" method="post">
-
-                        <div class="input-group input-group-lg">
-                            <input type="email" aria-required="true" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-                            <span class="input-group-btn">
-                  <button type="submit" id="widget-subscribe-submit-button" class="btn btn-default"><i class="fa fa-paper-plane"></i></button>
-                  </span> </div>
-                    </form>
-
-                    <small>Stay informed on our latest news!</small>
-
                 </div>
             </div>
-        </section>
-        <!-- end: SUBSCRIBE -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="m-b-20">We are making progress</h4>
 
-        <!-- BLOG -->
-        <section class="background-grey">
-            <div id="blog">
-                <div class="container">
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="100" data-delay="0" data-type="%">
+                                <div class="progress-title">HTML5</div>
+                            </div>
+                        </div>
 
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="94" data-delay="100" data-type="%">
+                                <div class="progress-title">CSS3</div>
+                            </div>
+                        </div>
 
-                    <div class="heading">
-                        <h2>LATEST NEWS</h2>
-                        <span class="lead">Our awesome clients we've had the pleasure to work with! </span>
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="89" data-delay="200" data-type="%">
+                                <div class="progress-title">JQUERY</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="78" data-delay="300" data-type="%">
+                                <div class="progress-title">MYSQL</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="75" data-delay="400" data-type="%">
+                                <div class="progress-title">PHP</div>
+                            </div>
+                        </div>
+                        <p class="lead">Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus.</p>
                     </div>
-
-                    <!-- Blog post-->
-                    <div id="blog">
-                        <div class="container">
-                            <!-- Blog -->
-                            <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
-
-                                <!-- Post item-->
-                                <div class="post-item border">
-                                    <div class="post-item-wrap">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img alt="" src="images/blog/12.jpg">
-                                            </a>
-                                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                                        </div>
-                                        <div class="post-item-description">
-                                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-                                            <h2><a href="#">Lighthouse, standard post with a single image
-</a></h2>
-                                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-
-                                            <a href="#" class="item-link">Read More <i class="fa fa-arrow-right"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end: Post item-->
-
-                                <!-- Post item-->
-                                <div class="post-item border">
-                                    <div class="post-item-wrap">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img alt="" src="images/blog/17.jpg">
-                                            </a>
-                                            <span class="post-meta-category"><a href="">Science</a></span>
-                                        </div>
-                                        <div class="post-item-description">
-                                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-
-                                            <h2><a href="#">Lighthouse, standard post with a single image
-</a></h2>
-                                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-
-                                            <a href="#" class="item-link">Read More <i class="fa fa-arrow-right"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end: Post item-->
-
-
-                                <!-- Post item-->
-                                <div class="post-item border">
-                                    <div class="post-item-wrap">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img alt="" src="images/blog/18.jpg">
-                                            </a>
-                                            <span class="post-meta-category"><a href="">Science</a></span>
-                                        </div>
-                                        <div class="post-item-description">
-                                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
-
-                                            <h2><a href="#">Lighthouse, standard post with a single image
-</a></h2>
-                                            <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-
-                                            <a href="#" class="item-link">Read More <i class="fa fa-arrow-right"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end: Post item-->
+                    <div class="col-md-4">
+                        <h4 class="m-b-20">Best services around</h4>
+                        <div class="accordion fancy radius clean">
+                            <div class="ac-item ac-active">
+                                <h5 class="ac-title"><i class="fa fa-rocket"></i>Suscipit laboriosam</h5>
+                                <div class="ac-content ac-active">We’re POLO, a creative agency located in the heart of New York city. Suspendisse consectetur fringilla luctus.
+                                    <br />
+                                    <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title"><i class="fa fa-heart"></i>Aliquam voluptatem</h5>
+                                <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                                    <br />
+                                    <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title"><i class="fa fa-shopping-cart"></i>Labore et dolore</h5>
+                                <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    <br />
+                                    <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</div>
                             </div>
                         </div>
                     </div>
-                    <!-- end: Blog post-->
+                    <div class="col-md-4">
+                        <h4 class="m-b-20">Latest from Blog</h4>
+                        <div class="post-thumbnail-list">
+                            <div class="post-thumbnail-entry">
+                                <img src="homepages/corporate-v7/images/blog/5.jpg" alt="">
+                                <div class="post-thumbnail-content">
+                                    <a href="#">Suspendisse consectetur fringilla</a>
+                                    <span class="post-date"><i class="fa fa-clock-o"></i> 6m ago</span>
+                                    <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
+                                </div>
+                            </div>
+                            <div class="post-thumbnail-entry">
+                                <img src="homepages/corporate-v7/images/blog/6.jpg" alt="">
+                                <div class="post-thumbnail-content">
+                                    <a href="#">Consectetur adipiscing elit</a>
+                                    <span class="post-date"><i class="fa fa-clock-o"></i> 24h ago</span>
+                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                </div>
+                            </div>
+                            <div class="post-thumbnail-entry">
+                                <img src="homepages/corporate-v7/images/blog/7.jpg" alt="">
+                                <div class="post-thumbnail-content">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                                    <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                </div>
+                            </div>
+                            <div class="post-thumbnail-entry">
+                                <img src="homepages/corporate-v7/images/blog/8.jpg" alt="">
+                                <div class="post-thumbnail-content">
+                                    <a href="#">Fringilla Lorem ipsum dolor sit amet</a>
+                                    <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-
-
-
             </div>
         </section>
-        <!-- end: BLOG -->
+        <!-- end: Know more -->
 
 
+        <!-- Contact -->
+        <section id="section7" class="p-t-150 p-b-200" style="background-image:url(homepages/branding/images/background-4.png); background-position:71% 22%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="m-b-10">Get in Touch with Us</h2>
+                                <p class="lead">Our Headquarters are in Australia, USA, Europe, Asia, Africa </p>
+                            </div>
+                            <div class="col-md-6 m-b-30">
+                                <address>
+								<strong>Headquarters:</strong><br>
+								795 Folsom Ave, Suite 600<br>
+								San Francisco, CA 94107<br>
+							</address>
+                                <abbr><strong>Phone:</strong></abbr> (+1) 1234 56789
+                                <br>
+                                <abbr><strong>Fax:</strong></abbr> (+1) 12 3456 78910
+                                <br>
+                                <abbr><strong>Email:</strong></abbr> info@inspiro-media.com
+                            </div>
+                            <div class="col-md-6 m-b-30">
+                                <address>
+								<strong>Headquarters:</strong><br>
+								795 Folsom Ave, Suite 600<br>
+								San Francisco, CA 94107<br>
+							</address>
+                                <abbr><strong>Phone:</strong></abbr> (+1) 1234 56789
+                                <br>
+                                <abbr><strong>Fax:</strong></abbr> (+1) 12 3456 78910
+                                <br>
+                                <abbr><strong>Email:</strong></abbr> info@inspiro-media.com
+                            </div>
+                            <div class="col-md-12">
+                                <h4>We are social</h4>
+                                <div class="social-icons social-icons-light social-icons-colored-hover">
+                                    <ul>
+                                        <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
+                                        <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                        <li class="social-youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li class="social-instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li class="social-pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li class="social-gplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li class="social-dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        <li class="social-skype"><a href="#"><i class="fa fa-skype"></i></a></li>
+                                        <li class="social-linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="social-behance"><a href="#"><i class="fa fa-behance"></i></a></li>
+                                        <li class="social-flickr"><a href="#"><i class="fa fa-flickr"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <form class="widget-contact-form" action="include/contact-form.php" role="form" method="post">
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" aria-required="true" name="widget-contact-form-name" class="form-control required name" placeholder="Enter your Name">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" aria-required="true" name="widget-contact-form-email" class="form-control required email" placeholder="Enter your Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <label class="upper" for="phone">Phone</label>
+                                    <input type="text" class="form-control required" name="widget-contact-form-phone" placeholder="Enter phone" aria-required="true">
+                                </div>
 
+                                <div class="form-group col-md-6">
+                                    <label>Services</label>
+                                    <select name="widget-contact-form-services">
+                                        <option value="">Select service</option>
+                                        <option value="Wordpress">Wordpress</option>
+                                        <option value="PHP / MySQL">PHP / MySQL</option>
+                                        <option value="HTML5 / CSS3">HTML5 / CSS3</option>
+                                        <option value="Graphic Design">Graphic Design</option>
+                                    </select>
 
-        <!-- MAP -->
-        <section id="section6" class="no-padding">
-            <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
-            <div class="map" data-map-address="Melburne, Australia" data-map-icon="images/markers/marker1.png" data-height-xxs="160"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea type="text" name="widget-contact-form-message" rows="9" class="form-control required" placeholder="Enter your Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-light" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- end: MAP -->
+        <!-- end: Contact -->
+
+        <!-- Subscribe form -->
+        <section class="background-colored text-center p-t-80  p-b-30">
+            <div class="container">
+                <div class="widget clearfix widget-newsletter">
+                    <form class="widget-subscribe-form form-inline" action="include/subscribe-form.php" role="form" method="post">
+                        <h3 class="text-light">Subscribe to our Newsletter</h3>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+                            <input type="email" aria-required="true" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                            <span class="input-group-btn">
+											<button type="submit" id="widget-subscribe-submit-button" class="btn btn-light">Subscribe</button>
+										</span>
+                        </div>
+                        <small class="text-light">Stay informed on our latest news!</small>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+        <!-- end: Subscribe form -->
 
         <!-- Footer -->
         <footer id="footer" class="footer-light">
