@@ -58,3 +58,5 @@ Route::get('/user/{id}/select-type', 'UserController@editType')->name('user.sele
 // Choose profile type (PUT)
 Route::put('/user/{id}/select-type', 'UserController@editTypeUpdate')->name('user.select-type-update');
 
+Route::view('/home-event', 'pages.home-event');
+

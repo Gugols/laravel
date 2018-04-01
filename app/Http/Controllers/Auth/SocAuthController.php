@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 //other
 
@@ -69,9 +70,8 @@ class SocAuthController extends Controller
                 $file = str_replace('type=normal', 'type=large', $file);
             }
         }
-        $fileContents = file_get_contents($file);
-        File::put(public_path(). '/avatars/' .$user->getId() . ".jpg", $fileContents);
-
+        $avatar_file = file_get_contents($file);
+        Storage::put('uploads/avatars/'.$user->getId() . ".jpg", $avatar_file);
         $user = User::create([
             'name'     => $user->name,
             'email'    => $user->email,
