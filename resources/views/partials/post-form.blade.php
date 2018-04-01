@@ -1,4 +1,4 @@
-<form class="form-horizontal" method="POST" action="{{ URL::route('user.update') }}">
+<form class="form-horizontal" method="POST" action="{{ URL::route('posts.store') }}">
   {{ csrf_field() }}
 <fieldset>
 

@@ -55,7 +55,7 @@ class RolesAndPermissionsSeeder extends Seeder
         
                 // create roles and assign created permissions
         
-                $role = Role::create(['name' => 'regular_user']);
+                $role = Role::create(['name' => 'regular user']);
                 $role->givePermissionTo($regular_user_permissions);
          
         

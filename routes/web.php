@@ -21,36 +21,40 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // posts
 
-Route::get('/posts/new', 'PostController@create');
+Route::group(['middleware' => ['permission:publish own posts']], function () {
+    // Create a new post (GET)
+    Route::get('/posts/new', 'PostController@create');
+    // Create a new post (POST)
+    Route::post('/posts', 'PostController@store')->name('posts.store');
+});
 
+// Show a single post (GET)
 Route::get('/posts/show/{id}', 'PostController@show');
 
-Route::post('/posts', 'PostController@store');
-
+// Delete post (GET)
 Route::get('/posts/delete/{id}', 'PostController@destroyShow');
 
+// Deleta post (DELETE)
 Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delete');
 
-//Route::delete('/posts/delete/{id}', 'PostController@destroy');
+
 
 // OAuth Routes
 Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider');
 Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCallback');
 
-// Profile views
+///// User routers
 
-// set profile type
-//Route::get('/user/set-type', 'UserController@create')->name('user.set-type');
-
-// actually create the profile
- Route::put('/user/{id}', 'UserController@update')->name('user.update');
-
-// Edit profile page
+// Update user (GET)
 Route::get('/user/{id}/edit', 'UserController@edit')->name('user.edit');
 
+// Update user (PUT)
+ Route::put('/user/{id}', 'UserController@update')->name('user.update');
+
+
+// Choose profile type (GET)
 Route::get('/user/{id}/select-type', 'UserController@editType')->name('user.select-type');
 
+// Choose profile type (PUT)
 Route::put('/user/{id}/select-type', 'UserController@editTypeUpdate')->name('user.select-type-update');
 
-// Send editted form data
-// Route::put('/profile/edit', 'ProfileController@update');

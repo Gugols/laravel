@@ -72,12 +72,14 @@ class SocAuthController extends Controller
         $fileContents = file_get_contents($file);
         File::put(public_path(). '/avatars/' .$user->getId() . ".jpg", $fileContents);
 
-        return User::create([
+        $user = User::create([
             'name'     => $user->name,
             'email'    => $user->email,
             'provider' => $provider,
             'provider_id' => $user->id
         ]);
+        $user->assignRole('regular user');
+        return $user;
     }
 
     
