@@ -3,26 +3,43 @@
 @section('content')
 
         <!-- SECTION FULLSCREEN -->
-        <section class="parallax text-light halfscreen" data-parallax-image="{{ asset('images/app/knowledge.jpg') }}">
-            <div class="container">
-                <div class="container-fullscreen">
-
-                    <div class="text-middle text-center text-right">
-                        <h1 class="text-uppercase text-medium" data-animation="fadeInDown" data-animation-delay="100">{{ $user->name }}</h1>
-                        <p class="lead" data-animation="fadeInDown" data-animation-delay="300">
-                            @switch($user->profile_type) @case(1) Student
-                            <i class="fa fa-book"></i>
-                            @break @case(2) Company / Organization
-                            <i class="fa fa-building"></i>
-                            @break @case(3) University
-                            <i class="fa fa-graduation-cap"></i>
-                            @break @default
-                            <Unknown @endswitch </p>
+        <section id="page-title" data-parallax-image="images/parallax/5.jpg"><div class="parallax-container" data-velocity="-.090" style="background: url({{ asset('images/app/knowledge.jpg') }})"></div>
+            <div class="container xs-text-center sm-text-center text-light">
+                    <div class="row">
+                    <div class="col-md-5 p-b-60">
+                            <h1 class="text-uppercase text-medium" data-animation="fadeInDown" data-animation-delay="100">{{ $user->name }}</h1>
+                            <p class="lead" data-animation="fadeInDown" data-animation-delay="300">
+                                @switch($user->profile_type) @case(1) Student
+                                <i class="fa fa-book"></i>
+                                @break @case(2) Company / Organization
+                                <i class="fa fa-building"></i>
+                                @break @case(3) University
+                                <i class="fa fa-graduation-cap"></i>
+                                @break @default
+                                <Unknown @endswitch </p>
+                    <a href="#services" class="btn btn-light btn-outline btn-rounded">Make a donation</a>
                     </div>
-
-                </div>
-            </div>
-        </section>
+                    <div class="col-md-7">
+                    <div class="col-md-6">
+                    <div class="text-center">
+                    <div class="counter text-large"> <span data-speed="3000" data-refresh-interval="50" data-to="12416" data-from="600" data-seperator="true">12416</span> </div>
+                    <div class="seperator seperator-small"></div>
+                    <p>LINES OF CODE</p>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                            <div class="team-members team-members-circle" style="max-height: 200px; max-width: 200px;">
+                                    <div class="team-member">
+                                      <div class="team-image">
+                                        <img src="{{ route('home') }}/uploads/avatars/{{ $user->avatar }}">
+                                      </div>
+                                    </div>
+                                  </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+            </section>
         <!-- end: SECTION FULLSCREEN -->
 
         <section class="p-b-10">

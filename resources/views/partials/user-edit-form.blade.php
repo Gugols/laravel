@@ -79,7 +79,7 @@
               <label class="control-label " for="short_description">
                 Profile picture
               </label>
-              <div class="team-members team-members-circle" style="max-height: 150px; max-width: 150px;">
+              <div class="team-members team-members-circle" style="max-height: 200px; max-width: 200px;">
               <div class="team-member">
               <div class="team-image">
               <img src="{{ route('home') }}/uploads/avatars/{{ UserController::getAvatar($user->id) }}">
