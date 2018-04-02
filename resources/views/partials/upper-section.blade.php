@@ -5,4 +5,5 @@
     </div>
     </div>
   </section>
+  @include('flash::message')
   

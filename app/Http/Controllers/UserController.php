@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Image;
 
 class UserController extends Controller
 {
@@ -80,20 +81,29 @@ class UserController extends Controller
                 'name' => 'required|min:2',
             ]);
 
-        //dd($request->all(), $id);
         $user = User::find($id);
         $user->name = $request->input('name');
-        //dd($user);
         $user->email = $request->input('email');
         $user->phone = $request->input('phone');
         $user->school = $request->input('school');
         $user->profile_type = $request->input('profile_type');
         $user->short_description = $request->input('short_description');
         $user->description = $request->input('description');
-        $user->save();
-        return redirect('home');
 
-       // dd($user);
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+    		$filename = time() . '.' . $avatar->getClientOriginalExtension();
+            //dd($filename);
+            $a = Image::make($avatar)->resize(300, 300)->save(public_path('/uploads/avatars/' . $filename));
+            //dd($a);
+    		$user = Auth::user();
+    		$user->avatar = $filename;
+    		$user->save();
+    	}
+
+        $user->save();
+        flash($user->name."'s profile has been successfully updated.")->success();
+        return redirect()->route('home');
 
     }
 
@@ -138,5 +148,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public static function getAvatar($id) {
+        $user = User::find($id);
+        return $user->avatar;
     }
 }

@@ -27,6 +27,7 @@
         <!-- end: Our Work -->
 
         <!-- Our numbers -->
+        @include('flash::message')
         <section id="section2" class="image-block no-padding">
             <div class="container-fluid">
             <div class="row">

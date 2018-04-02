@@ -149,6 +149,7 @@ return [
         // Other service providers...
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -213,6 +214,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         // Other aliases...
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'UserController' => App\Http\Controllers\UserController::class,
 
     ],
 

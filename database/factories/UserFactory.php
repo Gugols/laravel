@@ -23,6 +23,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'phone' => $faker->e164PhoneNumber(),
         'school' => $faker->words($nb = 3, $asText = true, $variableNbWords = true),
         'short_description' => $faker->realText($maxNbChars = 250, $indexSize = 2),
+        'avatar' => 'default.jpg',
     'description' => $faker->realText($maxNbChars = 2000, $indexSize = 2),
     ];
 });
