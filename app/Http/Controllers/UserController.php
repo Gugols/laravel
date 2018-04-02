@@ -113,7 +113,7 @@ class UserController extends Controller
 
         if(Auth::check()) {
 
-            if($user->profile_type)
+            if($user->profile_type || $user->id != Auth::id())
             {
                 return redirect()->route('home');
             }

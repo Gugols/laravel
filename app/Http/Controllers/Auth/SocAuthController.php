@@ -52,14 +52,11 @@ class SocAuthController extends Controller
      */
     public function findOrCreateUser($user, $provider)
     {
-        //dd($user, $provider);
         $authUser = User::where('provider_id', $user->id)->first();
-        //dd($authUser, "test1");
         if ($authUser) {
             return $authUser;
         }
-        //dd(public_path());
-        //dd($user->getId());
+
         $file = $user->getAvatar();
         if($file = $user->getAvatar()) {
             if ($provider == 'google') {
@@ -71,12 +68,13 @@ class SocAuthController extends Controller
             }
         }
         $avatar_file = file_get_contents($file);
-        Storage::put('uploads/avatars/'.$user->getId() . ".jpg", $avatar_file);
+        Storage::disk('uploads')->put('/avatars/'.$user->getId() . ".jpg", $avatar_file);
         $user = User::create([
             'name'     => $user->name,
             'email'    => $user->email,
             'provider' => $provider,
-            'provider_id' => $user->id
+            'provider_id' => $user->id,
+            'avatar' => $user->getId() . ".jpg",
         ]);
         $user->assignRole('regular user');
         return $user;

@@ -82,7 +82,7 @@
                             @endauth
                             @guest
                             <li class="visible-md visible-lg">
-                                <a href="{{ route('login') }}" class="btn btn-rounded btn-light">Get Started</a>
+                                <a href="{{ route('register') }}" class="btn btn-rounded btn-light">Get Started</a>
                                 </li>
                             @endauth
                         </ul>
