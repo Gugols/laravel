@@ -45,11 +45,15 @@ Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCa
 
 ///// User routers
 
+// View User page
+
+Route::get('/user/{id}', 'UserController@show')->name('user.show');
+
 // Update user (GET)
 Route::get('/user/{id}/edit', 'UserController@edit')->name('user.edit');
 
 // Update user (PUT)
- Route::put('/user/{id}', 'UserController@update')->name('user.update');
+Route::put('/user/{id}', 'UserController@update')->name('user.update');
 
 
 // Choose profile type (GET)
