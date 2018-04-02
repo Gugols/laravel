@@ -1,4 +1,6 @@
-@include('partials.header')
+@extends('layouts.main-layout')
+
+@section('content')
 
         <!-- Inspiro Slider -->
         <div id="slider" class="inspiro-slider slider-fullscreen arrows-large arrows-creative dots-creative" data-height-xs="360">
@@ -491,4 +493,4 @@
         </section>
         <!-- end: Subscribe form -->
 
-@include('partials.footer')
+@endsection

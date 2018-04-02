@@ -1,4 +1,6 @@
-@include('partials.header')
+@extends('layouts.main-layout')
+
+@section('content')
 
         <!-- SECTION FULLSCREEN -->
         <section class="parallax text-light halfscreen" data-parallax-image="{{ asset('images/app/knowledge.jpg') }}">
@@ -167,4 +169,4 @@
             </div>
         </div>
         <hr class="space">
-@include('partials.footer')
+@endsection
