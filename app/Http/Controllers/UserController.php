@@ -16,7 +16,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $id = Auth::user()->id;
+        $user = User::find($id);
+        return view('pages.users.user-page')->with(['user'=>$user]);
     }
 
     /**
@@ -103,7 +105,7 @@ class UserController extends Controller
 
             if($user->profile_type)
             {
-                return redirect('home');
+                return redirect()->route('home');
             }
         }
 
@@ -121,7 +123,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->profile_type = $request->input('profile_type');
         $user->save();
-        return redirect('home');
+        return redirect()->route('home');
 
        // dd($user);
 

@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.landing');
+})->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('homedemo');
 
 // posts
 
@@ -40,12 +40,14 @@ Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delet
 
 
 // OAuth Routes
-Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider');
+Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider')->name('social-auth');
 Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCallback');
 
 ///// User routers
 
 // View User page
+
+Route::get('/user', 'UserController@index')->name('user.index');
 
 Route::get('/user/{id}', 'UserController@show')->name('user.show');
 
@@ -62,5 +64,4 @@ Route::get('/user/{id}/select-type', 'UserController@editType')->name('user.sele
 // Choose profile type (PUT)
 Route::put('/user/{id}/select-type', 'UserController@editTypeUpdate')->name('user.select-type-update');
 
-Route::view('/landing', 'pages.landing');
 

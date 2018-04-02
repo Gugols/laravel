@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         // Other service providers...
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -1,16 +1,27 @@
-@extends('layouts.app')
+@extends('layouts.main-layout')
 
 @section('content')
+
+@include('partials.upper-section', array('h1'=>'Log In'))
+
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        <div class="col-md-12">
+                        <div class="form-group row">
+                            <label for="fb-login">Social Authentification: </label>
+                        <button type="button" id="fb-login" class="btn btn-facebook" onclick="location.href = '{{ route('social-auth', 'facebook') }}';">
+                                <i class="fa fa-facebook m-r-5"></i> Facebook
+                        </button>
+                    </div>
+                </div>
                         <div class="form-group row">
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -54,10 +65,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
+                                <button type="button" class="btn btn-outline btn-dark" onclick="location.href = '{{ route('password.request') }}';">{{ __('Forgot Your Password?') }}</button>
                             </div>
                         </div>
                     </form>

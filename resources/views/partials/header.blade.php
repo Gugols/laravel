@@ -44,7 +44,7 @@
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
-                            <li>
+                            <li style="display: none;">
                                 <!--top search-->
                                 <a id="top-search-trigger" href="#" class="toggle-item">
                                     <i class="fa fa-search"></i>
@@ -53,21 +53,38 @@
                                 <!--end: top search-->
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fa fa-user"></i>
-                                </a>
+                                @auth <a href="{{ route('user.index') }}"><i class="fa fa-user"></i></a> @endauth
+                            @guest <a href="{{ route('login') }}"><i class="fa fa-sign-in"></i></a> @endguest
                             </li>
+                            @auth
                             <li class="hidden-xs">
-                                <!--shopping cart-->
-                                <div id="shopping-cart">
-                                    <a href="shop-cart.html">
-                                        <span class="shopping-cart-items">8</span>
+                                    <!--shopping cart-->
+                                    <div id="shopping-cart">
+                                        <a href="shop-cart.html">
+                                            <span class="shopping-cart-items">8</span>
+    
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                    <!--end: shopping cart-->
+                                </li>
+                            <li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                  document.getElementById('logout-form').submit();">
+                                    <i class="fa fa-times"></i>
+                                 </a>
 
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                                <!--end: shopping cart-->
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                     @csrf
+                                 </form>
                             </li>
+                            @endauth
+                            @guest
+                            <li class="visible-md visible-lg">
+                                <a href="{{ route('login') }}" class="btn btn-rounded btn-light">Get Started</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
                     <!--end: Header Extras-->
@@ -80,7 +97,7 @@
                     <!--end: Navigation Resposnive Trigger-->
 
                     <!--Navigation-->
-                    <div id="mainMenu">
+                    <div id="mainMenu" class="light">
                         <div class="container">
                             <nav>
                                 <ul>
@@ -92,7 +109,7 @@
                                     </li>
                                     <li>
                                         <a href="#">Articles</a>
-                                    </li>
+                                    </li>                              
                                 </ul>
                             </nav>
                         </div>
