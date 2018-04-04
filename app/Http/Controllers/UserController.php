@@ -64,8 +64,14 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
+
+    if($this::ownerOrHasPermission($user->id, 'edit users')) {
         return view('pages.users.edit-user')->with(['user'=>$user]);
+    } else {
+        flash("You have no permission to access this page.")->error();
+        return redirect()->route('home');
     }
+}
 
     /**
      * Update the specified resource in storage.
@@ -86,7 +92,6 @@ class UserController extends Controller
         $user->email = $request->input('email');
         $user->phone = $request->input('phone');
         $user->school = $request->input('school');
-        $user->profile_type = $request->input('profile_type');
         $user->short_description = $request->input('short_description');
         $user->description = $request->input('description');
 
@@ -94,16 +99,15 @@ class UserController extends Controller
             $avatar = $request->file('avatar');
     		$filename = time() . '.' . $avatar->getClientOriginalExtension();
             //dd($filename);
-            $a = Image::make($avatar)->resize(300, 300)->save(public_path('/uploads/avatars/' . $filename));
+            $a = Image::make($avatar)->crop(300, 300)->resize(300, 300)->save(public_path('/uploads/avatars/' . $filename));
             //dd($a);
-    		$user = Auth::user();
     		$user->avatar = $filename;
     		$user->save();
     	}
 
         $user->save();
         flash($user->name."'s profile has been successfully updated.")->success();
-        return redirect()->route('home');
+        return redirect()->route('user.show', $id);
 
     }
 
@@ -154,4 +158,15 @@ class UserController extends Controller
         $user = User::find($id);
         return $user->avatar;
     }
+
+     public static function ownerOrHasPermission($owner_id, $permission) {
+        if(Auth::check()) {
+            if(($owner_id == Auth::id()) || Auth::user()->hasPermissionTo($permission)) {
+                return true;
+            }
+        }
+        return false;
+     }
+
+ 
 }

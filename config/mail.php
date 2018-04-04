@@ -1,5 +1,24 @@
 <?php
 
+//new
+
+return array(
+    "driver" => "smtp",
+    "host" => "debugmail.io",
+    "port" => '25',
+    "from" => array(
+        "address" => "gugolss@gmail.com",
+        "name" => "Maecenas bakalaurs"
+    ),
+    "encryption" => "tls",
+    "username" => 'gugolss@gmail.com',
+    "password" => 'e01209a0-35a3-11e8-8d43-8f9c220cf33d',
+    "sendmail" => "/usr/sbin/sendmail -bs",
+    "pretend" => false
+);
+
+//old
+
 return [
 
     /*

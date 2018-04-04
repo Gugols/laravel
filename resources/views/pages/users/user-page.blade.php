@@ -8,6 +8,13 @@
                     <div class="row">
                     <div class="col-md-5 p-b-60">
                             <h1 class="text-uppercase text-medium" data-animation="fadeInDown" data-animation-delay="100">{{ $user->name }}</h1>
+                            <div class="team-members team-members-circle" style="max-height: 200px; max-width: 200px;">
+                                    <div class="team-member">
+                                      <div class="team-image">
+                                        <img src="{{ route('home') }}/uploads/avatars/{{ $user->avatar }}">
+                                      </div>
+                                    </div>
+                                  </div>
                             <p class="lead" data-animation="fadeInDown" data-animation-delay="300">
                                 @switch($user->profile_type) @case(1) Student
                                 <i class="fa fa-book"></i>
@@ -21,20 +28,7 @@
                     </div>
                     <div class="col-md-7">
                     <div class="col-md-6">
-                    <div class="text-center">
-                    <div class="counter text-large"> <span data-speed="3000" data-refresh-interval="50" data-to="12416" data-from="600" data-seperator="true">12416</span> </div>
-                    <div class="seperator seperator-small"></div>
-                    <p>LINES OF CODE</p>
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                            <div class="team-members team-members-circle" style="max-height: 200px; max-width: 200px;">
-                                    <div class="team-member">
-                                      <div class="team-image">
-                                        <img src="{{ route('home') }}/uploads/avatars/{{ $user->avatar }}">
-                                      </div>
-                                    </div>
-                                  </div>
+
                     </div>
                     </div>
                     </div>
@@ -42,8 +36,27 @@
             </section>
         <!-- end: SECTION FULLSCREEN -->
 
+        @if(UserController::ownerOrHasPermission($user->id, 'edit users'))
+        <section class="p-t-0 p-b-0">
+        <div class="page-menu menu-outline">
+                <div class="container">
+                <div class="menu-title">Profile <span>Options</span></div>
+                <nav>
+                <ul>
+                <li><a href="{{ route('user.edit', $user->id) }}"> <i class="fa fa-user"></i>  Profile information</a> </li>
+                <li><a href="#"> <i class="fa fa-lock"></i>  Security Settings</a></li>
+                </ul>
+                </nav>
+                <div id="menu-responsive-icon">
+                <i class="fa fa-reorder"></i>
+                </div>
+                </div>
+                </div>
+            </section>
+        @endif
         <section class="p-b-10">
             <div class="container">
+
 
                 <div class="hr-title hr-long center">
                     <abbr>In short...</abbr>

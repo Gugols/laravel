@@ -49,6 +49,6 @@ class LoginController extends Controller
             return redirect()->route('user.select-type', ['id' => $user->id]);
         } 
 
-        return redirect('home');
+        return redirect()->route('home');
     }
 }

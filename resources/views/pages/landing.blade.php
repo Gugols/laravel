@@ -13,7 +13,7 @@
                         <h1 data-caption-animation="zoom-out">Maecenas</h1>
                         <p class="lead">Where students get the support to fullfill their ultimate potential</p>
                         <div data-caption-animation="zoom-out">
-                            <a href="https://www.youtube.com/watch?v=nrJtHemSPW4" data-lightbox="iframe" class="play-button"><i class="fa fa-play"></i></a>
+                            <a href="https://www.youtube.com/watch?v=8gg3BD6hzBA" data-lightbox="iframe" class="play-button"><i class="fa fa-play"></i></a>
                         </div>
                         <!-- end: Captions -->
                     </div>
