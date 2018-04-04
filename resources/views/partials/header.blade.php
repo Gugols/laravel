@@ -52,10 +52,20 @@
                                 </a>
                                 <!--end: top search-->
                             </li>
-                            <li>
-                                @auth <a href="{{ route('user.index') }}"><i class="fa fa-user"></i></a> @endauth
-                            @guest <a href="{{ route('login') }}"><i class="fa fa-sign-in"></i></a> @endguest
-                            </li>
+                    
+                                @guest <li><a href="{{ route('login') }}"><i class="fa fa-sign-in"></i></a></li> @endguest
+                          
+                                @auth
+                                <li>
+                                        <div class="topbar-dropdown">
+                                        <a class="title"><i class="fa fa-user"></i></a>
+                                        <div class="dropdown-list">
+                                        <a class="list-entry" href="{{ route('user.index') }}">My profile</a>
+                                        <a class="list-entry" href="{{ route('user.edit', Auth::id())}}">Settings</a>
+                                        </div>
+                                        </div>
+                                </li>
+                                @endauth
                             @auth
                             <li class="hidden-xs">
                                     <!--shopping cart-->
