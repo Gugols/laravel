@@ -8,8 +8,15 @@ class Post extends Model
 {
     protected $fillable = ['title', 'body', 'image'];
 
-    public function test() {
-        return;
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
+    public function comments()
+    {
+        return $this->morphMany('App\Comment', 'commentable');
     }
 
     }

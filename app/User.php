@@ -32,10 +32,17 @@ class User extends Authenticatable
 
 
     /*
-    *   User can have many post
+    *   User can have many posts
     */
     public function posts() {
-        return $this->hasMany(Post::class);
+        return $this->hasMany('App\Post');
+    }
+
+   // User can have many comments
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
     }
 
 }

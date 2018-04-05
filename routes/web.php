@@ -45,6 +45,10 @@ Route::group(['middleware' => ['permission:delete own posts']], function () {
 });
 
 
+/////////// Comments
+
+Route::post('/posts/{id}/comments', 'CommentController@store')->name('comments.store');
+
 
 
 // OAuth Routes
