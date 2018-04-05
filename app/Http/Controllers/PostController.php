@@ -14,7 +14,7 @@ class postController extends Controller
     }
 
     public function store(Request $request) {
-
+//dd($request);
             	// Means validate request with this specific rules.
     	$this->validate(request(), [
     		'title' => 'required',
@@ -25,11 +25,17 @@ class postController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = Auth::id();
-        //$post->body = request(['body']);
+        //$path = Storage::putFile('uploads/post_images', $request->file('avatar'));
+        //Storage::disk('uploads')->put('/post_images/'.$user->getId() . ".jpg", $avatar_file);
+        if($request->file) {
+          $path = $request->file('image')->store('public/uploads/post_images');
+          $post->image = $request->image->hashName();
+        }
         $post->save();
 
           //Create a new post using the request data . saving it to the database and then redirect.
-		    return redirect('/posts/new');
+        //return redirect('/posts/new');
+        return redirect()->route('posts.show', ['id' => $post->id]);
 
     }
 
@@ -38,15 +44,50 @@ class postController extends Controller
       return view('pages.posts.show-post', ['post'=>$post]);
     }
 
+    public function edit($id) {
+      $post = Post::find($id);
+      $this->authorize('update', $post);
+      return view('pages.posts.edit-post')->with(['post'=>$post]);
+    }
 
+    public function update(Request $request, $id)
+    {
+      $this->validate(request(), [
+    		'title' => 'required',
+    		'body'	=> 'required'
+        ]);
+        
+        $post = Post::find($id);
+        $this->authorize('update', $post);
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        if($request->file) {
+          $path = $request->file('image')->store('public/uploads/post_images');
+          $post->image = $request->image->hashName();
+        }
+        $post->save();
+
+          //Create a new post using the request data . saving it to the database and then redirect.
+        //return redirect('/posts/new');
+        return redirect()->route('posts.show', ['id' => $post->id]);
+    }
 
   
     public function destroy($id)
     {
+      $post = Post::find($id);
+      Post::destroy($id);
+      return redirect()->route('posts.show', ['id' => 50]);
+    //   if ($request->ajax()) {
+    //     $post = Post::find($id);
+    //     Post::destroy($id);
+    // }
+    //return redirect()->back();
+      //  dd($id);
         //dd($id);
         // delete
         //$post = Post::find($id);
-        Post::destroy($id);
+        //Post::destroy($id);
         //$post->delete();
     }
 }

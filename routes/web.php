@@ -19,7 +19,9 @@ Auth::routes();
 
 Route::get('/homedome', 'HomeController@index')->name('homedemo');
 
-// posts
+///////////// posts
+// Show a single post (GET)
+Route::get('/posts/show/{id}', 'PostController@show')->name('posts.show');
 
 Route::group(['middleware' => ['permission:publish own posts']], function () {
     // Create a new post (GET)
@@ -28,20 +30,29 @@ Route::group(['middleware' => ['permission:publish own posts']], function () {
     Route::post('/posts', 'PostController@store')->name('posts.store');
 });
 
-// Show a single post (GET)
-Route::get('/posts/show/{id}', 'PostController@show');
 
-// Delete post (GET)
-Route::get('/posts/delete/{id}', 'PostController@destroyShow');
+Route::get('/posts/edit/{id}', 'PostController@edit')->name('posts.edit');
+Route::put('/posts/{id}', 'PostController@update')->name('posts.update');
 
-// Deleta post (DELETE)
-Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delete');
+
+Route::put('/user/{id}', 'UserController@update')->name('user.update');
+
+Route::group(['middleware' => ['permission:delete own posts']], function () {
+    // Delete post (GET)
+    Route::get('/posts/delete/{id}', 'PostController@destroyShow');
+    // Deleta post (DELETE)
+    Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delete');
+});
+
 
 
 
 // OAuth Routes
 Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider')->name('social-auth');
 Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCallback');
+
+
+
 
 ///// User routers
 

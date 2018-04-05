@@ -19,6 +19,7 @@ class PostsTable extends Migration
             $table->string('title');
             $table->longText('body');
             $table->integer('user_id');
+            $table->string('image')->nullable();
             //$table->foreign('user_id')->references('id')->on('users');
         });
     }

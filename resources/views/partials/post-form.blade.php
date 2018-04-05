@@ -1,34 +1,25 @@
-<form class="form-horizontal" method="POST" action="{{ URL::route('posts.store') }}">
-  {{ csrf_field() }}
-<fieldset>
-
-<!-- Form Name -->
-<legend>New Post</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="title">Title</label>  
-  <div class="col-md-4">
-  <input id="title" name="title" type="text" placeholder="placeholder" class="form-control input-md" required="">
-    
+<section>
+  <div class="container"></div>
+  <div class="row"></div>
+  <div class="col-md-6 col-md-offset-3">
+      <form method="POST" enctype="multipart/form-data" action="{{ URL::route('posts.store') }}">
+          {{ csrf_field() }}
+  <div class="form-group">
+      <label class="upper" for="phone">Title</label>
+  <input id="title" name="title" type="text" class="form-control input-md" required="">
   </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="body">Text</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="body" name="body">default text</textarea>
+  <div class="form-group">
+      <label class="upper" for="phone">Text</label>
+  <textarea class="form-control" id="body" name="body"></textarea>
   </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="submit">Ok</label>
-  <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-primary">Button</button>
+  <div class="form-group">
+        <input type="file" name="image">
   </div>
-</div>
-
-</fieldset>
-</form>
+  <div class="form-inline form-group">
+  <button class="btn btn-default" type="submit">Submit</button>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+</section>

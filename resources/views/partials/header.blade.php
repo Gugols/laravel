@@ -9,12 +9,16 @@
     <!-- Document title -->
     <title>Maecenas | Student social network</title>
     <!-- Stylesheets & Fonts -->
+    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800|Merriweather:300"
         rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/plugins.css') }}" defer rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" defer rel="stylesheet">
-    <link href="{{ asset('css/responsive.css') }}" defer rel="stylesheet"> </head>
+    <link href="{{ asset('css/responsive.css') }}" defer rel="stylesheet">
+    <meta name="csrf-token" content="<?= csrf_token() ?>" />
+    <meta name="csrf-param" content="_token" />
 </head>
+
 
 <body class="no-page-loader">
     <!-- Wrapper -->
@@ -27,7 +31,7 @@
                 <div class="container">
                     <!--Logo-->
                     <div id="logo">
-                        <a href="index.html" class="logo" data-dark-logo="/images/logo-dark.png">
+                    <a href="{{ route('home') }}" class="logo" data-dark-logo="/images/logo-dark.png">
                             <img src="/images/logo.png" alt="Polo Logo">
                         </a>
                     </div>
