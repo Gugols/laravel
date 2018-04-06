@@ -9,6 +9,11 @@
   display: inline-block;
 }
 
+.comment .image {
+  height: auto !important;
+  width: auto !important;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.

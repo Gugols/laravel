@@ -22,17 +22,12 @@
                 </div>
                 <div class="comments p-b-0" id="comments">
                     <div class="comment_number">
-                        Comments <span>(2)</span>
+                        Comments
+                        <span>( {{ $post->comments->count() }} )</span>
                     </div>
                     <div class="comment-list">
-                            @foreach ($post->comments as $comment)
-                            @include('partials.list-post-comments', array(
-                                'body' => $comment->body,
-                                'name' => $comment->user->name,
-                                'date' => $comment->created_at,
-                                'avatar' => $comment->user->avatar,
-                                ))
-                        @endforeach
+                        @foreach ($post->comments as $comment) @include('partials.list-post-comments', array( 'body' => $comment->body, 'name' =>
+                        $comment->user->name, 'date' => $comment->created_at, 'avatar' => $comment->user->avatar, )) @endforeach
                     </div>
                 </div>
                 @include('partials.add-comment')
