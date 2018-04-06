@@ -1,5 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
+.btn-icon-only i {
+  margin: 0;
+}
+
+.comment .text a,
+.comment .text .btn {
+  display: inline-block;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.

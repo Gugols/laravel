@@ -1,0 +1,14 @@
+.btn-icon-only {
+    i {
+        margin: 0;
+    }
+}
+
+// comment name, delete button inline
+.comment {
+    .text {
+        a, .btn {
+            display: inline-block;
+        }
+    }
+}

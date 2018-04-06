@@ -14,6 +14,7 @@
         rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/plugins.css') }}" defer rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" defer rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" defer rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" defer rel="stylesheet">
     <meta name="csrf-token" content="<?= csrf_token() ?>" />
     <meta name="csrf-param" content="_token" />

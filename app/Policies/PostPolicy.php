@@ -69,7 +69,7 @@ class PostPolicy
     public function delete(User $user, Post $post)
     {
                      // If user is administrator, then can edit any post
-                     if (Auth::user()->can('edit all posts')) {
+                     if (Auth::user()->can('delete all posts')) {
                         return true;
                     }
             
