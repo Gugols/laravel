@@ -151,7 +151,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-
+        Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -218,7 +218,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'UserController' => App\Http\Controllers\UserController::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
+        'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
     ],
 
 ];

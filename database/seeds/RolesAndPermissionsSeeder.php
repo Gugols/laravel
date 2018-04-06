@@ -31,6 +31,7 @@ class RolesAndPermissionsSeeder extends Seeder
                 Permission::create(['name' => 'warn users']);
                 Permission::create(['name' => 'ban users']);
                 Permission::create(['name' => 'edit users']);
+                Permission::create(['name' => 'delete all comments']);
 
                 // array of 
                 $regular_user_permissions = [
@@ -48,6 +49,7 @@ class RolesAndPermissionsSeeder extends Seeder
                     'warn users',
                     'ban users',
                     'edit users',
+                    'delete all comments',
                 ];
 
                 $admin_permissions = [

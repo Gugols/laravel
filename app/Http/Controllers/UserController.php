@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Image;
 
+
 class UserController extends Controller
 {
     /**

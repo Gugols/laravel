@@ -18,7 +18,7 @@ class postController extends Controller
             	// Means validate request with this specific rules.
     	$this->validate(request(), [
     		'title' => 'required',
-    		'body'	=> 'required'
+        'body'	=> 'required',
         ]);
         
         $post = new Post;

@@ -2,6 +2,15 @@
   <div class="container"></div>
   <div class="row"></div>
   <div class="col-md-6 col-md-offset-3">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
       <form method="POST" enctype="multipart/form-data" action="{{ URL::route('posts.store') }}">
           {{ csrf_field() }}
   <div class="form-group">
