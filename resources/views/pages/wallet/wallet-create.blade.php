@@ -10,7 +10,7 @@
             <div class="col-md-6 col-md-offset-3">
                 <form method="POST" action="{{ URL::route('wallet.create', Auth::user()->id) }}">
                     {{ csrf_field() }}
-                    {{ method_field('PUT') }}
+                    {{ method_field('POST') }}
 
                 <div class="checkbox">
                     <label>
