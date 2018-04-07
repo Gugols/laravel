@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Spatie\Permission\Traits\HasRoles;
+use App\Wallet;
 
 class User extends Authenticatable
 {
@@ -47,7 +48,7 @@ class User extends Authenticatable
 
     public function wallet() {
 
-        return $this->hasOne('App\Wallet', 'user_id');
+        return $this->hasOne('App\Wallet');
 
     }
 

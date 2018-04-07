@@ -30,6 +30,19 @@ class WalletController extends Controller
         if(Auth::user()->id != $id) {
             return redirect()->route('home');
         }
+
+        $user = User::find($id);
+                
+        try {
+            $wallet = User::find($id)->wallet;
+            if($wallet) {
+                flash("You already have a wallet. No additional wallet is needed.")->error();
+                return redirect()->route('home');
+            }
+        } catch (Exception $e) {
+            
+        }
+
         return view('pages.wallet.wallet-create');
     }
 
@@ -50,9 +63,17 @@ class WalletController extends Controller
                 ]);
 
                 $user = User::find($id);
-                dd($user->wallet);
+                
+                try {
+                    $wallet = User::find($id)->wallet;
+                    if($wallet) {
+                        flash("You already have a wallet. No additional wallet is needed.")->error();
+                        return redirect()->route('home');
+                    }
+                } catch (Exception $e) {
+                    
+                }
         
-                // dd($id);
         
                 // agreement received, lets create a new Stripe customer
         
@@ -67,7 +88,7 @@ class WalletController extends Controller
                     $wallet->customer_id = $customer['id'];
                     $wallet->user_id = $id;
                     $wallet->save();
-
+                    flash("Your wallet has been successfully created! </br> Now you can add funds and donate them!")->success();
                     return redirect()->route('home');
                 }
     }
