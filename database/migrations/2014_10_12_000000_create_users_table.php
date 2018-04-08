@@ -23,7 +23,6 @@ class CreateUsersTable extends Migration
             $table->string('profile_type')->nullable();
             $table->string('phone')->nullable();;
             $table->string('school')->nullable();;
-            $table->string('wallet')->nullable();
             $table->longtext('short_description')->nullable();;
             $table->longtext('description')->nullable();;
             $table->string('avatar')->default('default.jpg');

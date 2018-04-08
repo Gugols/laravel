@@ -37,3 +37,9 @@
 .credit-card-box .panel-heading img {
     min-width: 180px;
 }
+
+.credit-card-box {
+    .panel-heading.display-table {
+        width: 100%;
+    }
+}

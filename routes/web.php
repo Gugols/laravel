@@ -88,4 +88,4 @@ Route::get('/wallet/{id}/create', 'WalletController@create')->name('wallet.creat
 Route::post('/wallet/{id}/create', 'WalletController@store')->name('wallet.store');
 
 Route::get('/cards/new', 'CardController@create')->name('card.create');
-Route::post('/cards', 'CardController@create')->name('card.store');
+Route::post('/cards', 'CardController@store')->name('card.store');

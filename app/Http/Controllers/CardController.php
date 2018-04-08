@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Card;
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
+use Cartalyst\Stripe\Laravel\Facades\Stripe;
+
 
 class CardController extends Controller
 {
@@ -25,6 +28,7 @@ class CardController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', 'App\Card');
         return view('pages.cards.card-new');
     }
 
@@ -36,7 +40,38 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->authorize('create', 'App\Card');
+        
+                $this->validate(request(), [
+                'card_number' => 'required',
+                'ccExpiryMonth'	=> 'required',
+                'ccExpiryYear' => 'required',
+                'cvvNumber'	=> 'required',
+                ]);
+
+                $card_number = $request->input('card_number');
+                $ccExpiryMonth = $request->input('ccExpiryMonth');
+                $ccExpiryYear = $request->input('ccExpiryYear');
+                $cvvNumber = $request->input('cvvNumber');
+
+        $token = Stripe::tokens()->create([
+            'card' => [
+                'number'    => $card_number,
+                'exp_month' => $ccExpiryMonth,
+                'exp_year'  => $ccExpiryYear,
+                'cvc'       => $cvvNumber,
+            ],
+        ]);
+        $card = Stripe::cards()->create(Auth::user()->wallet->customer_id, $token['id']);
+        
+        $card = new Card;
+        $card->card_number = $card_number;
+        $card->ccExpiryMonth = $ccExpiryMonth;
+        $card->ccExpiryYear = $ccExpiryYear;
+        $card->cvvNumber = $cvvNumber;
+        $card->user_id = Auth::id();
+        $card->save();
+
     }
 
     /**

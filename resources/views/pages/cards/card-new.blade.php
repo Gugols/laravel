@@ -27,7 +27,7 @@
                         </div>                    
                     </div>
                     <div class="panel-body">
-                        <form method="POST" action="{{ URL::route('card.create', Auth::user()->id) }}">
+                        <form method="POST" action="{{ URL::route('card.store') }}">
                             {{ csrf_field() }}
                             {{ method_field('POST') }}
                             <div class="row">
@@ -35,7 +35,7 @@
                                     <div class="form-group">
                                         <label for="cardNumber">CARD NUMBER</label>
                                         <div class="input-group">
-                                            <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required="" autofocus="">
+                                            <input type="tel" class="form-control" name="card_number" placeholder="Valid Card Number" autocomplete="cc-number" required="" autofocus="">
                                             <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
                                         </div>
                                     </div>                            
@@ -47,26 +47,26 @@
     <div class="col-xs-5 col-md-5">
                                     <div class="form-group">
                                         <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> MONTH</label>
-                                        <input type="tel" class="form-control" name="cardExpiry" placeholder="MM" autocomplete="cc-exp" required="">
+                                        <input type="tel" class="form-control" name="ccExpiryMonth" placeholder="MM" autocomplete="cc-exp" required="">
                                     </div>
                                 </div>
 <div class="col-xs-4 col-md-4">
                                     <div class="form-group">
                                         <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> YEAR</label>
-                                        <input type="tel" class="form-control" name="cardExpiry" placeholder="YY" autocomplete="cc-exp" required="">
+                                        <input type="tel" class="form-control" name="ccExpiryYear" placeholder="YY" autocomplete="cc-exp" required="">
                                     </div>
                                 </div>
                                 <div class="col-xs-3 col-md-3 pull-right">
                                     <div class="form-group">
                                         <label for="cardCVC">CV CODE</label>
-                                        <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required="">
+                                        <input type="tel" class="form-control" name="cvvNumber" placeholder="CVC" autocomplete="cc-csc" required="">
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="subscribe btn btn-primary btn-lg btn-block" type="button">Add Card</button>
+                                    <button class="subscribe btn btn-primary btn-lg btn-block" type="submit">Add Card</button>
                                 </div>
                             </div>
                             <div class="row" style="display:none;">
