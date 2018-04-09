@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:300,400);@charset "UTF-8";
 
 .btn-icon-only i {
   margin: 0;
@@ -68,6 +68,434 @@ p {
 
 .credit-card-box .panel-heading.display-table {
   width: 100%;
+}
+
+/* fonts */
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wallet-overview {
+  /* Hide + and - */
+  /* animations */
+}
+
+.wallet-overview h2 {
+  margin: 0px;
+  font-weight: 400;
+  color: #707584;
+  font: 24px/24px 'Open Sans', sans-serif;
+}
+
+.wallet-overview h3 {
+  margin: 0px 0px 5px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.wallet-overview .wrapper {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wallet-overview .app-wrapper {
+  background-color: #fff;
+  height: 700px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wallet-overview .wallet {
+  width: 360px;
+  background-color: #f2f2f2;
+  height: 100%;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  padding: 50px;
+}
+
+.wallet-overview .wallet h2 {
+  display: inline-block;
+}
+
+.wallet-overview .transactions-wrapper {
+  width: 520px;
+  padding: 50px;
+}
+
+.wallet-overview .total-balance {
+  display: inline-block;
+  float: right;
+  font-weight: 600;
+  font-size: 32px;
+  color: #444750;
+}
+
+.wallet-overview .total-balance::before {
+  content: '$';
+}
+
+.wallet-overview .transactions {
+  margin-top: 60px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 50px;
+  height: 550px;
+  overflow: scroll;
+}
+
+.wallet-overview .transactions.show {
+  -webkit-animation: fade-in .3s 1;
+          animation: fade-in .3s 1;
+}
+
+.wallet-overview .transactions::-webkit-scrollbar {
+  display: none;
+}
+
+.wallet-overview .transaction-item {
+  margin-bottom: 45px;
+}
+
+.wallet-overview .transaction-item {
+  padding-left: 40px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wallet-overview .transaction-item::before {
+  position: absolute;
+  content: '';
+  border: 2px solid #e1e1e1;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  left: 0px;
+  top: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  color: #666666;
+}
+
+.wallet-overview .transaction-item.credit::before {
+  content: '+';
+  font-size: 25px;
+  line-height: 19px;
+  padding: 0px 4px 0px;
+}
+
+.wallet-overview .transaction-item.credit .transaction-item_amount .amount,
+.wallet-overview .transaction-item.credit .transaction-item_amount span {
+  color: #66cc33;
+}
+
+.wallet-overview .transaction-item.debit::before {
+  content: '\2212';
+  font-size: 20px;
+  line-height: 21px;
+  padding: 0px 5px;
+}
+
+.wallet-overview .transaction-item.debit .transaction-item_amount .amount,
+.wallet-overview .transaction-item.debit .transaction-item_amount span {
+  color: #8393ca;
+}
+
+.wallet-overview .transaction-item span.details {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+}
+
+.wallet-overview .transaction-item_details {
+  width: 270px;
+}
+
+.wallet-overview .transaction-item_amount {
+  width: 110px;
+  text-align: right;
+}
+
+.wallet-overview .transaction-item_amount span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 45px;
+}
+
+.wallet-overview .transaction-item_amount .amount {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 45px;
+  position: relative;
+  margin: 0px;
+  display: inline-block;
+  text-indent: -15px;
+}
+
+.wallet-overview .transaction-item_amount .amount::first-letter {
+  color: transparent !important;
+}
+
+.wallet-overview .cards {
+  margin-top: 60px;
+}
+
+.wallet-overview .credit-card {
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 45px;
+  border-radius: 3px;
+  border: 2px solid #e1e1e1;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.wallet-overview .credit-card:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.wallet-overview .credit-card.active {
+  border-color: #8393ca;
+  border-width: 3px;
+}
+
+.wallet-overview .card-image {
+  display: inline-block;
+  height: 40px;
+  width: 58px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.wallet-overview .credit-card.visa .card-image,
+.wallet-overview .card-image.visa {
+  background-image: url("https://dl.dropboxusercontent.com/s/lwvqznj7lwwkrkk/visa.png?dl=0");
+}
+
+.wallet-overview .credit-card.amex .card-image,
+.wallet-overview .card-image.amex {
+  background-image: url("https://dl.dropboxusercontent.com/s/e3toeu643kc4xqr/amex.png?dl=0");
+}
+
+.wallet-overview .credit-card.mc .card-image,
+.wallet-overview .card-image.mc {
+  background-image: url("https://dl.dropboxusercontent.com/s/8uh687u5tcchz9s/mastercard.png?dl=0");
+}
+
+.wallet-overview .credit-card_expiration {
+  color: #b3b3b3;
+}
+
+.wallet-overview .credit-card_number {
+  color: #666666;
+}
+
+.wallet-overview .card-list {
+  margin-top: 20px;
+}
+
+.wallet-overview .card-list .card-image {
+  cursor: pointer;
+  margin-right: 15px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.wallet-overview .card-list .card-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.wallet-overview .modal {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.wallet-overview .modal.open {
+  display: block;
+}
+
+.wallet-overview .modal-body {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 35px 15px 25px;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 20%;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.wallet-overview .modal-body h3 {
+  font: 20px/20px 'Open Sans', sans-serif;
+  color: #707584;
+}
+
+.wallet-overview .modal-control,
+.wallet-overview .modal-close {
+  display: inline-block;
+  float: right;
+  color: #c6cce2;
+  font-size: 45px;
+  line-height: 22px;
+  cursor: pointer;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+}
+
+.wallet-overview .modal-control:hover,
+.wallet-overview .modal-close:hover {
+  color: #8393ca;
+}
+
+.wallet-overview .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* media queries */
+
+@media (max-width: 910px) {
+  .wallet-overview .wrapper {
+    border-radius: 8px;
+  }
+
+  .wallet-overview .wallet {
+    width: 100%;
+    border-top-right-radius: inherit;
+    padding-bottom: 25px;
+  }
+
+  .wallet-overview .cards {
+    margin-top: 25px;
+  }
+
+  .wallet-overview .app-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    border-top-right-radius: inherit;
+    height: initial;
+  }
+
+  .wallet-overview .credit-card {
+    width: calc(50% - 25px);
+    max-width: 260px;
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  .wallet-overview .credit-card:nth-of-type(2) {
+    margin-right: 0px;
+  }
+
+  .wallet-overview .transactions {
+    height: initial;
+  }
+
+  .wallet-overview .transactions-wrapper {
+    width: 100%;
+  }
+
+  .wallet-overview .transaction-item_amount {
+    width: calc(100% - 270px);
+  }
+}
+
+@media (max-width: 780px) {
+  .wallet-overview h3 {
+    line-height: 24px;
+  }
+
+  .wallet-overview .cards {
+    text-align: center;
+  }
+
+  .wallet-overview .credit-card {
+    width: calc(100% - 25px);
+    max-width: 260px;
+  }
+
+  .wallet-overview .credit-card:nth-of-type(2) {
+    margin-right: 25px;
+  }
+
+  .wallet-overview .credit-card:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .wallet-overview .total-balance {
+    font-size: 22px;
+  }
+
+  .wallet-overview .transaction-item_amount {
+    width: 110px;
+  }
+}
+
+@media (max-width: 390px) {
+  .wallet-overview .wallet {
+    padding: 50px 25px;
+  }
+
+  .wallet-overview .transactions-wrapper {
+    padding: 50px 25px;
+  }
+
+  .wallet-overview h2 {
+    font: 18px/24px 'Open Sans', sans-serif;
+  }
 }
 
 /*!

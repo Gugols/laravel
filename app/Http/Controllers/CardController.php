@@ -72,6 +72,9 @@ class CardController extends Controller
         $card->user_id = Auth::id();
         $card->save();
 
+        flash("Card has been added successfuly! What's now? Go and sponsor the next prodigy! ;)")->success();
+        return redirect()->route('home');
+
     }
 
     /**

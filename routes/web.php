@@ -84,8 +84,10 @@ Route::put('/user/{id}/select-type', 'UserController@editTypeUpdate')->name('use
 
 /////// WAllet & Cards
 
-Route::get('/wallet/{id}/create', 'WalletController@create')->name('wallet.create');
-Route::post('/wallet/{id}/create', 'WalletController@store')->name('wallet.store');
+
+Route::get('/wallet', 'WalletController@index')->name('wallet.index');
+Route::get('/wallet/create', 'WalletController@create')->name('wallet.create');
+Route::post('/wallet/create', 'WalletController@store')->name('wallet.store');
 
 Route::get('/cards/new', 'CardController@create')->name('card.create');
 Route::post('/cards', 'CardController@store')->name('card.store');

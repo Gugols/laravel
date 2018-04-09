@@ -17,7 +17,7 @@ class WalletController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.wallet.wallet-overview');
     }
 
     /**
@@ -25,16 +25,13 @@ class WalletController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        if(Auth::user()->id != $id) {
-            return redirect()->route('home');
-        }
 
-        $user = User::find($id);
+        $user = Auth::user();
                 
         try {
-            $wallet = User::find($id)->wallet;
+            $wallet = $user->wallet;
             if($wallet) {
                 flash("You already have a wallet. No additional wallet is needed.")->error();
                 return redirect()->route('home');
@@ -52,20 +49,17 @@ class WalletController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-                //dd($user);
-                if(Auth::user()->id != $id) {
-                    return redirect()->route('home');
-                }
+
                 $this->validate(request(), [
                     'agreement' => 'required_without_all',
                 ]);
 
-                $user = User::find($id);
+                $user = Auth::user();
                 
                 try {
-                    $wallet = User::find($id)->wallet;
+                    $wallet = $user->wallet;
                     if($wallet) {
                         flash("You already have a wallet. No additional wallet is needed.")->error();
                         return redirect()->route('home');
@@ -78,17 +72,17 @@ class WalletController extends Controller
                 // agreement received, lets create a new Stripe customer
         
                 $customer = Stripe::customers()->create([
-                    'email' => Auth::user()->email,
-                    'description' => Auth::user()->id,
+                    'email' => $user->email,
+                    'description' => $user->id,
                 ]);
                     
                 // create a new wallet if Stripe return newly created customer_id
                 if($customer['id']) {
                     $wallet = new Wallet;
                     $wallet->customer_id = $customer['id'];
-                    $wallet->user_id = $id;
+                    $wallet->user_id = $user->id;
                     $wallet->save();
-                    flash("Your wallet has been successfully created! </br> Now you can add funds and donate them!")->success();
+                    flash("Your wallet has been successfully created! </br> Now you just need to add a payment card in order to donate!")->success();
                     return redirect()->route('home');
                 }
     }

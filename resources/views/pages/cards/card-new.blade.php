@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('partials.upper-section', array('h1'=>'New card'))
+@include('partials.upper-section', array('h1'=>'Adding new card'))
 
 <section>
 
