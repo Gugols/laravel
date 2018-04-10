@@ -66,16 +66,21 @@ class CardController extends Controller
                 $ccExpiryYear = $request->input('ccExpiryYear');
                 $cvvNumber = $request->input('cvvNumber');
 
-        $token = Stripe::tokens()->create([
-            'card' => [
-                'number'    => $card_number,
-                'exp_month' => $ccExpiryMonth,
-                'exp_year'  => $ccExpiryYear,
-                'cvc'       => $cvvNumber,
-            ],
-        ]);
+                
+                try {
+                    $token = Stripe::tokens()->create([
+                        'card' => [
+                            'number'    => $card_number,
+                            'exp_month' => $ccExpiryMonth,
+                            'exp_year'  => $ccExpiryYear,
+                            'cvc'       => $cvvNumber,
+                        ],
+                    ]);
         $card_stripe = Stripe::cards()->create(Auth::user()->wallet->customer_id, $token['id']);
-
+        } catch (\Exception $e) {
+            flash('Error while adding card. '.$e->getMessage())->error();
+            return redirect()->route('card.create');
+        }
         $card = new Card;
         $card->user_id = Auth::id();
         $card->card_id = $card_stripe['id'];

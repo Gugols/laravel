@@ -67,7 +67,8 @@
                                         <div class="dropdown-list">
                                         <a class="list-entry" href="{{ route('user.index') }}">My profile</a>
                                         <a class="list-entry" href="{{ route('user.edit', Auth::id())}}">Settings</a>
-                                        </div>
+                                        <a class="list-entry" href="{{ route('wallet.index')}}">Wallet</a>
+                                    </div>
                                         </div>
                                 </li>
                                 @endauth

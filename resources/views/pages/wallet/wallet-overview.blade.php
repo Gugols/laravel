@@ -15,18 +15,32 @@
 
                 <div class="wallet-overview">
                     <div class="wrapper">
-                            @if(!$user->wallet)
+                        @if(!$user->wallet)
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div role="alert" class="alert alert-warning">
+                                    <strong>Notice!</strong> It seems you haven't created a wallet yet. In order to add cards and store funds, please add
+                                    it first by clicking
+                                    <strong>
+                                        <a href="{{ route('wallet.create') }}">here</a>
+                                    </strong>. </div>
+                            </div>
+                        </div>
+                        @endif 
+                        @if($user->wallet) 
+                            @if(count($user->cards) === 0)
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div role="alert" class="alert alert-warning">
-                                        <strong>Notice!</strong> It seems you haven't created a wallet yet. In order to add cards and store funds, please it
-                                        first by clicking
+                                        <strong>Notice!</strong> It seems you haven't added any card 💳. In order to add funds for donations, please add
+                                        one first by clicking
                                         <strong>
-                                            <a href="{{ route('wallet.create') }}">here</a>
+                                            <a href="{{ route('card.create') }}">here</a>
                                         </strong>. </div>
                                 </div>
                             </div>
                             @endif
+                        @endif
                         <div class="app-wrapper col-xs-12">
                             <!--Wallet-->
                             <aside class="wallet">
@@ -40,6 +54,9 @@
                             <content class="transactions-wrapper">
                                 <h2>
                                     Current Balance
+                                    <a href="{{ route('charge.create') }}" class="btn btn-success btn-xs btn-icon-only" role="button" data-method="get" data-disable-with="Waiting..." data-confirm="Are you sure you want to remove this card from your wallet? The action is permanant!">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
                                     <span class="total-balance">729.00</span>
                                 </h2>
                                 <div class="transactions show">

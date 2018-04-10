@@ -14,4 +14,8 @@ class Card extends Model
     public function user() {
         return $this->belongsTo('App\User');
     }
+
+    public function charges() {
+        return $this->hasMany('App\Charge');
+    }
 }

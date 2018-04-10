@@ -92,3 +92,6 @@ Route::post('/wallet/create', 'WalletController@store')->name('wallet.store');
 Route::get('/cards/new', 'CardController@create')->name('card.create');
 Route::post('/cards', 'CardController@store')->name('card.store');
 Route::delete('/cards/{id}/delete', 'CardController@destroy')->name('card.delete');
+
+Route::get('/charges/new', 'ChargeController@create')->name('charge.create');
+Route::post('/charges', 'ChargeController@create')->name('charge.store');
