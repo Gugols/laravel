@@ -94,4 +94,4 @@ Route::post('/cards', 'CardController@store')->name('card.store');
 Route::delete('/cards/{id}/delete', 'CardController@destroy')->name('card.delete');
 
 Route::get('/charges/new', 'ChargeController@create')->name('charge.create');
-Route::post('/charges', 'ChargeController@create')->name('charge.store');
+Route::post('/charges', 'ChargeController@store')->name('charge.store');

@@ -17,7 +17,7 @@ class CreateWalletsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('customer_id')->nullable();
-            $table->integer('balance')->default(0)->nullable();
+            $table->decimal('balance')->default(0)->nullable();
             $table->timestamps();
         });
     }

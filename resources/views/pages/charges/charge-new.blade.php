@@ -15,7 +15,15 @@
                      on <= small devices and 4/12 page width on >= medium devices -->
                 <div class="col-xs-12 col-md-6 col-md-offset-3">
                 
-                
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <!-- CREDIT CARD FORM STARTS HERE -->
                     <div class="panel panel-default credit-card-box">
                         <div class="panel-heading display-table">
@@ -35,7 +43,7 @@
                                         <div class="form-group">
                                             <label for="cardNumber">Amount</label>
                                             <div class="input-group">
-                                                <input type="tel" class="form-control input-lg" name="card_number" placeholder="EUR" autocomplete="cc-number" required="" autofocus="">
+                                                <input type="tel" class="form-control input-lg" name="amount" placeholder="EUR" autocomplete="cc-number" required="" autofocus="">
                                                 <span class="input-group-addon"><i class="fa fa-eur"></i></span>
                                             </div>
                                         </div>                            
@@ -44,12 +52,12 @@
                                 <div class="row">
                                     
         
-        <div class="col-xs-12">
+                                <div class="col-xs-12">
                                         <div class="form-group">
-                                            <label for="cardExpiry">Card to charge</label>
-                                            <select>
+                                            <label for="card_id">Card to charge</label>
+                                            <select name="card_id">
                                                     @foreach($cards as $card)
-                                            <option value="{{$card->id}}">({{$card->brand}}) **** **** **** {{$card->last4}}</option>
+                                                <option value="{{$card->id}}">({{$card->brand}}) **** **** **** {{$card->last4}}</option>
                                                     @endforeach
                                             </select>
                                         </div>

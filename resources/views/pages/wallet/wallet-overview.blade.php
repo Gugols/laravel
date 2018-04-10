@@ -54,10 +54,16 @@
                             <content class="transactions-wrapper">
                                 <h2>
                                     Current Balance
-                                    <a href="{{ route('charge.create') }}" class="btn btn-success btn-xs btn-icon-only" role="button" data-method="get" data-disable-with="Waiting..." data-confirm="Are you sure you want to remove this card from your wallet? The action is permanant!">
+                                    <a href="{{ route('charge.create') }}" class="btn btn-success btn-xs btn-icon-only" role="button" data-method="get">
                                         <i class="fa fa-plus"></i>
                                     </a>
-                                    <span class="total-balance">729.00</span>
+                                    <span class="total-balance">
+                                        @if(!$user->wallet)
+                                            0
+                                        @else
+                                            {{ $user->wallet->balance }}
+                                        @endif
+                                    </span>
                                 </h2>
                                 <div class="transactions show">
                                     <div class="transaction-item debit">

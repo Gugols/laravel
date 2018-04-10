@@ -146,7 +146,7 @@ p {
 }
 
 .wallet-overview .total-balance::before {
-  content: '$';
+  content: '\20AC';
 }
 
 .wallet-overview .transactions {

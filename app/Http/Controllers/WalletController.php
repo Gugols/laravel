@@ -64,7 +64,7 @@ class WalletController extends Controller
                     $wallet = $user->wallet;
                     if($wallet) {
                         flash("You already have a wallet. No additional wallet is needed.")->error();
-                        return redirect()->route('home');
+                        return redirect()->route('wallet.index');
                     }
                 } catch (Exception $e) {
                     
@@ -85,7 +85,7 @@ class WalletController extends Controller
                     $wallet->user_id = $user->id;
                     $wallet->save();
                     flash("Your wallet has been successfully created! </br> Now you just need to add a payment card in order to donate!")->success();
-                    return redirect()->route('home');
+                    return redirect()->route('wallet.index');
                 }
     }
 
