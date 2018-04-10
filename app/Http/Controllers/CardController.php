@@ -40,6 +40,14 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
+
+        // $table->string('card_number');
+        // $table->string('ccExpiryMonth');
+        // $table->string('ccExpiryYear');
+        // $table->string('brand');
+
+
+
         $this->authorize('create', 'App\Card');
         
                 $this->validate(request(), [
@@ -62,14 +70,15 @@ class CardController extends Controller
                 'cvc'       => $cvvNumber,
             ],
         ]);
-        $card = Stripe::cards()->create(Auth::user()->wallet->customer_id, $token['id']);
-        
+        $card_stripe = Stripe::cards()->create(Auth::user()->wallet->customer_id, $token['id']);
+
         $card = new Card;
-        $card->card_number = $card_number;
+        $card->user_id = Auth::id();
+        $card->card_id = $card_stripe['id'];
         $card->ccExpiryMonth = $ccExpiryMonth;
         $card->ccExpiryYear = $ccExpiryYear;
-        $card->cvvNumber = $cvvNumber;
-        $card->user_id = Auth::id();
+        $card->brand = $card_stripe['brand'];
+        $card->last4 = $card_stripe['last4'];
         $card->save();
 
         flash("Card has been added successfuly! What's now? Go and sponsor the next prodigy! ;)")->success();
@@ -117,8 +126,11 @@ class CardController extends Controller
      * @param  \App\Card  $Card
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Card $Card)
+    public function destroy($id)
     {
-        //
+        $card = Card::find($id);
+        $this->authorize('delete', $card);
+        Card::destroy($id);
+        return redirect()->route('home');
     }
 }

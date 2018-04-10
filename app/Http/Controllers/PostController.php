@@ -78,16 +78,5 @@ class postController extends Controller
       $post = Post::find($id);
       Post::destroy($id);
       return redirect()->route('posts.show', ['id' => 50]);
-    //   if ($request->ajax()) {
-    //     $post = Post::find($id);
-    //     Post::destroy($id);
-    // }
-    //return redirect()->back();
-      //  dd($id);
-        //dd($id);
-        // delete
-        //$post = Post::find($id);
-        //Post::destroy($id);
-        //$post->delete();
     }
 }

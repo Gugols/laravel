@@ -40,7 +40,7 @@ Route::put('/user/{id}', 'UserController@update')->name('user.update');
 Route::group(['middleware' => ['permission:delete own posts']], function () {
     // Delete post (GET)
     Route::get('/posts/delete/{id}', 'PostController@destroyShow');
-    // Deleta post (DELETE)
+    // Delete post (DELETE)
     Route::delete('/posts/delete/{id}', 'PostController@destroy')->name('posts.delete');
 });
 
@@ -91,3 +91,4 @@ Route::post('/wallet/create', 'WalletController@store')->name('wallet.store');
 
 Route::get('/cards/new', 'CardController@create')->name('card.create');
 Route::post('/cards', 'CardController@store')->name('card.store');
+Route::delete('/cards/{id}/delete', 'CardController@destroy')->name('card.delete');

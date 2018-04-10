@@ -28,7 +28,7 @@ h3 {
 
 .app-wrapper {
 	background-color: #fff;
-	height: 700px;
+	height: 800px;
 	max-width: 1000px;
 	margin: 0 auto;
 	border-radius: 8px;
@@ -274,7 +274,12 @@ h3 {
 	font-size: 45px;
 	line-height: 22px;
 	cursor: pointer;
-	transition: color .1s;
+    transition: color .1s;
+    
+    a {
+        text-decoration: none;
+        //color: inherit;
+    }
 }
 
 .modal-control:hover, .modal-close:hover {

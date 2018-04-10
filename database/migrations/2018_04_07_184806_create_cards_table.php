@@ -15,11 +15,12 @@ class CreateCardsTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('card_id');
             $table->integer('user_id');
-            $table->string('card_number');
+            $table->string('last4');
             $table->string('ccExpiryMonth');
             $table->string('ccExpiryYear');
-            $table->string('cvvNumber');
+            $table->string('brand');
             $table->timestamps();
         });
     }

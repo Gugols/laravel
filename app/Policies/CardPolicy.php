@@ -71,6 +71,14 @@ class CardPolicy
      */
     public function delete(User $user, Card $card)
     {
-        //
+        if (Auth::user()->can('delete all cards')) {
+            return true;
+        }
+
+        if($user->id === $card->user_id) {
+            return true;
+        }
+
+        return false;
     }
 }
