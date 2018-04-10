@@ -28,7 +28,11 @@ class CardController extends Controller
      */
     public function create()
     {
-        $this->authorize('create', 'App\Card');
+        try {$this->authorize('create', 'App\Card');
+        } catch (\Exception $e) {
+            flash('You have no wallet. <a href="'.route('wallet.create').'">Create it</a> before adding any cards.')->error();
+            return redirect()->route('wallet.index');
+        }
         return view('pages.cards.card-new');
     }
 
@@ -82,7 +86,7 @@ class CardController extends Controller
         $card->save();
 
         flash("Card has been added successfuly! What's now? Go and sponsor the next prodigy! ;)")->success();
-        return redirect()->route('home');
+        return redirect()->route('wallet.index');
 
     }
 
@@ -130,7 +134,9 @@ class CardController extends Controller
     {
         $card = Card::find($id);
         $this->authorize('delete', $card);
+        $wallet_id = $card->user->wallet->customer_id;
+        Stripe::cards()->delete($wallet_id, $card->card_id);
         Card::destroy($id);
-        return redirect()->route('home');
+        return redirect()->route('wallet.index');
     }
 }

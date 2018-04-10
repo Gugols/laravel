@@ -36,7 +36,7 @@ class CardPolicy
             if($wallet) {
                 return true;
             }
-        } catch (Exception $e) {
+        } catch (\Throwable $e) {
             return false;
         }
     }

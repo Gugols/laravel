@@ -9,16 +9,28 @@
         <div class="row justify-content-center">
             <!-- You can make it whatever width you want. I'm making it full width
                  on <= small devices and 4/12 page width on >= medium devices -->
+
             <div class="col-xs-12">
 
 
                 <div class="wallet-overview">
                     <div class="wrapper">
-                        <div class="app-wrapper">
-
+                            @if(!$user->wallet)
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div role="alert" class="alert alert-warning">
+                                        <strong>Notice!</strong> It seems you haven't created a wallet yet. In order to add cards and store funds, please it
+                                        first by clicking
+                                        <strong>
+                                            <a href="{{ route('wallet.create') }}">here</a>
+                                        </strong>. </div>
+                                </div>
+                            </div>
+                            @endif
+                        <div class="app-wrapper col-xs-12">
                             <!--Wallet-->
                             <aside class="wallet">
-                                <h2>My Wallets</h2>
+                                <h2>My Cards</h2>
                                 <div class="modal-control"><a href="{{ route('card.create') }}">+</a></div>
                                 <div class="cards">
                                     @include('partials.wallet-card-display-small')

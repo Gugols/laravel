@@ -17,7 +17,7 @@
  active">
     <div class="card-image"></div>
 <div class="credit-card_number">**** **** **** {{ $card->last4 }}</div>
-    <div class="credit-card_expiration">Valid Thru:{{ $card->ccExpiryMonth }}/{{ $card->ccExpiryYear }}</div>
+    <div class="credit-card_expiration">Valid Thru: {{ $card->ccExpiryMonth }}/{{ $card->ccExpiryYear }}</div>
 
     @can('delete', $card)
     <div class="card-delete">

@@ -111,8 +111,8 @@ p {
 .wallet-overview .app-wrapper {
   background-color: #fff;
   height: 800px;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   border-radius: 8px;
   display: -webkit-box;
   display: -ms-flexbox;

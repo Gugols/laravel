@@ -17,8 +17,9 @@ class WalletController extends Controller
      */
     public function index()
     {
-        $cards = Auth::user()->cards;
-        return view('pages.wallet.wallet-overview', ['cards'=>$cards]);
+        $user = Auth::user();
+        $cards = $user->cards;
+        return view('pages.wallet.wallet-overview', ['cards'=>$cards, 'user'=>$user]);
     }
 
     /**
