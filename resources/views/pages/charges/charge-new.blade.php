@@ -30,8 +30,8 @@
                             <div class="row display-tr">
                                 <h3 class="panel-title display-td">Add funds</h3>
                                 <div class="display-td">                            
-                                <img class="img-responsive pull-right" src="https://maecenas.test/storage/general/cards.png">
-                                </div>
+                                <img class="img-responsive pull-right" src="{{ asset('images/app/cards.png') }}">  
+                            </div>
                             </div>                    
                         </div>
                         <div class="panel-body">
