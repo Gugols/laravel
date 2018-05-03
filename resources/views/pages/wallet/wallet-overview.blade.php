@@ -66,76 +66,20 @@
                                     </span>
                                 </h2>
                                 <div class="transactions show">
-                                    <div class="transaction-item debit">
-                                        <div class="transaction-item_details">
-                                            <h3>Apple iPhone 6, 6g GB</h3>
-                                            <span class="details">Electronics #343223 - 12 July, 2016</span>
-                                        </div>
-                                        <div class="transaction-item_amount">
-                                            <span>$</span>
-                                            <p class="amount">+650.00</p>
-                                        </div>
-                                    </div>
+                                @foreach ($user->cards as $card)
+                                    @foreach ($card->charges()->orderBy('id', 'DESC')->get() as $charge)
                                     <div class="transaction-item credit">
-                                        <div class="transaction-item_details">
-                                            <h3>Funds Added</h3>
-                                            <span class="details">Payment #343212 - 11 July, 2016</span>
-                                        </div>
+                                            <div class="transaction-item_details">
+                                            <h3>Funds Added - {{$charge->id}}</h3>
+                                                <span class="details">Charge #{{ $charge->id }} - {{ $charge->created_at->format('M d Y') }}</span>
+                                            </div>
                                         <div class="transaction-item_amount">
                                             <span>$</span>
-                                            <p class="amount">-900.00</p>
+                                            <p class="amount">-{{$charge->amount}}</p>
                                         </div>
                                     </div>
-                                    <div class="transaction-item debit">
-                                        <div class="transaction-item_details">
-                                            <h3>Energy Bill</h3>
-                                            <span class="details"> #343566 - 11 July, 2016</span>
-                                        </div>
-                                        <div class="transaction-item_amount">
-                                            <span>$</span>
-                                            <p class="amount">+84.96</p>
-                                        </div>
-                                    </div>
-                                    <div class="transaction-item debit">
-                                        <div class="transaction-item_details">
-                                            <h3>Mega Image SRL</h3>
-                                            <span class="details">Food&amp;Health #343565 - 11 July, 2016</span>
-                                        </div>
-                                        <div class="transaction-item_amount">
-                                            <span>$</span>
-                                            <p class="amount">+112.75</p>
-                                        </div>
-                                    </div>
-                                    <div class="transaction-item debit">
-                                        <div class="transaction-item_details">
-                                            <h3>ATM DV24</h3>
-                                            <span class="details"> #343253 - 09 July, 2016</span>
-                                        </div>
-                                        <div class="transaction-item_amount">
-                                            <span>$</span>
-                                            <p class="amount">+200.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="transaction-item debit">
-                                        <div class="transaction-item_details">
-                                            <h3>Lukoil Station</h3>
-                                            <span class="details">Gas #343279 - 09 July, 2016</span>
-                                        </div>
-                                        <div class="transaction-item_amount">
-                                            <span>$</span>
-                                            <p class="amount">+190.48</p>
-                                        </div>
-                                    </div>
-                                    <div class="transaction-item credit">
-                                        <div class="transaction-item_details">
-                                            <h3>Funds Added</h3>
-                                            <span class="details">Payment #343212 - 11 July, 2016</span>
-                                        </div>
-                                        <div class="transaction-item_amount">
-                                            <span>$</span>
-                                            <p class="amount">+390.81</p>
-                                        </div>
-                                    </div>
+                                    @endforeach
+                                @endforeach
                                 </div>
                             </content>
 

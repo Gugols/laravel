@@ -24,7 +24,8 @@
                                 <i class="fa fa-graduation-cap"></i>
                                 @break @default
                                 <Unknown @endswitch </p>
-                    <a href="#services" class="btn btn-light btn-outline btn-rounded">Make a donation</a>
+                    <a href="#donate" class="btn btn-light btn-outline btn-rounded" data-method="post"
+                    data-disable-with="loading..." data-confirm="Are you sure you want to donate?">Make a donation</a>
                     </div>
                     <div class="col-md-7">
                     <div class="col-md-6">
