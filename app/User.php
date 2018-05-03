@@ -58,4 +58,16 @@ class User extends Authenticatable
         
     }
 
+    public function donations() {
+
+        return $this->hasMany('App\Donation');
+        
+    }
+
+    public function receivedDonations() {
+
+        return $this->hasMany('App\Donation', 'receiver_id');
+        
+    }
+
 }

@@ -38,7 +38,7 @@ class WalletController extends Controller
                 flash("You already have a wallet. No additional wallet is needed.")->error();
                 return redirect()->route('home');
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             
         }
 

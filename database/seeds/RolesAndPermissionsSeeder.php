@@ -22,6 +22,7 @@ class RolesAndPermissionsSeeder extends Seeder
                 Permission::create(['name' => 'delete own posts']);
                 Permission::create(['name' => 'publish own posts']);
                 Permission::create(['name' => 'unpublish own posts']);
+                Permission::create(['name' => 'create donation']);
 
                 // create moderator permissions
                 Permission::create(['name' => 'edit all posts']);
@@ -40,6 +41,7 @@ class RolesAndPermissionsSeeder extends Seeder
                     'delete own posts',
                     'publish own posts',
                     'unpublish own posts',
+                    'create donation'
                 ];
 
                 $moderator_permissions = [

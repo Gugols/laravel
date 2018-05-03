@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/homedome', 'HomeController@index')->name('homedemo');
 
-///////////// posts
+////// posts
 // Show a single post (GET)
 Route::get('/posts/show/{id}', 'PostController@show')->name('posts.show');
 
@@ -52,7 +52,7 @@ Route::delete('/comments/{id}/delete', 'CommentController@destroy')->name('comme
 
 
 
-// OAuth Routes
+////// OAuth Routes
 Route::get('/auth/{provider}', 'Auth\SocAuthController@redirectToProvider')->name('social-auth');
 Route::get('/auth/{provider}/callback', 'Auth\SocAuthController@handleProviderCallback');
 
@@ -82,7 +82,7 @@ Route::put('/user/{id}/select-type', 'UserController@editTypeUpdate')->name('use
 
 
 
-/////// WAllet & Cards
+////// Wallet & Cards
 
 
 Route::get('/wallet', 'WalletController@index')->name('wallet.index');
@@ -95,3 +95,11 @@ Route::delete('/cards/{id}/delete', 'CardController@destroy')->name('card.delete
 
 Route::get('/charges/new', 'ChargeController@create')->name('charge.create');
 Route::post('/charges', 'ChargeController@store')->name('charge.store');
+
+
+//////  Donations
+
+Route::get('/donations/{id}/create', 'DonationController@create')->name('donations.create');
+Route::post('/donations', 'DonationController@store')->name('donations.store');
+Route::get('/donations/{id}', 'DonationController@show')->name('donations.show');
+Route::delete('/donations/{id}/delete', 'DonationController@destroy')->name('donations.destroy');

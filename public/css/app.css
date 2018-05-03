@@ -22,6 +22,10 @@ p {
   font-weight: 300;
 }
 
+.donation-box .panel-heading img {
+  min-width: auto !important;
+}
+
 .credit-card-box .panel-title {
   display: inline;
   font-weight: bold;
