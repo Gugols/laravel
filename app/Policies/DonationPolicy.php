@@ -19,7 +19,11 @@ class DonationPolicy
      */
     public function view(User $user, Donation $donation)
     {
-        //
+        if(($user->id == $donation->user_id) || ($user->id == $donation->receiver_id)) {
+            return true;
+        }
+
+        return false;
     }
 
     /**

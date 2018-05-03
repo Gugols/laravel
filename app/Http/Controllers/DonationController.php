@@ -98,13 +98,32 @@ class DonationController extends Controller
      * @param  \App\Donation  $donation
      * @return \Illuminate\Http\Response
      */
-    public function show(Donation $donation)
+    public function show($id)
     {
 
-        dd($donation);
-        return;
-        return view('pages.donations.create-donation')->with(['receiver'=>$receiver]);
+        try {
+        $user = Auth::user();
+        $donation = Donation::find($id);
+        $donator = $donation->donator;
+        $receiver = $donation->receiver;
+        }
+        catch (\Exception $e) {
+            flash('Donation does not exist or is invalid!')->error();
+            return redirect()->route('home');
+        }
+
+        if(($donator->id != $user->id) && ($receiver->id != $user->id )) {
+            flash('You have no permission to view this donation')->error();
+            return redirect()->route('home');
+        }
+
+        return view('pages.donations.show-donation')->with([
+            'donation'=>$donation,
+            'donator'=>$donator,
+            'receiver'=>$receiver,
+            ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
