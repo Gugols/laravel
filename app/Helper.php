@@ -36,3 +36,8 @@ function getUserNameLink($id) {
     $link = route('user.show', ['id' => $user->id]);
     return '<a href="'.$link.'">'.$user->name.'</a>';
 }
+
+function getUserDetail($type, $needle, $interest) {
+    $user = User::where($type, $needle) -> first();
+    return $user->$interest;
+}

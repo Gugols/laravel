@@ -2,7 +2,6 @@
 
 @section('content')
     @include('partials.upper-section', array('h1'=>'Send a new message'))
-
     <h1>Create a new message</h1>
     <form action="{{ route('messages.store') }}" method="post">
         {{ csrf_field() }}
@@ -20,18 +19,19 @@
                 <textarea name="message" class="form-control">{{ old('message') }}</textarea>
             </div>
     
-            @if($users->count() > 0)
+            {{-- @if($users->count() > 0)
                 <div class="checkbox">
                     @foreach($users as $user)
                         <label title="{{ $user->name }}"><input type="checkbox" name="recipients[]"
                                                                 value="{{ $user->id }}">{!!$user->name!!}</label>
                     @endforeach
                 </div>
-            @endif
+            @endif --}}
+            <input type="hidden" name="recipients" value="{{$send_to->id}}">
     
             <!-- Submit Form Input -->
             <div class="form-group">
-                <button type="submit" class="btn btn-primary form-control">Submit</button>
+                <button class="subscribe btn btn-primary btn-lg btn-block" type="submit">Submit</button>
             </div>
         </div>
     </form>

@@ -4,22 +4,17 @@
     {{ csrf_field() }}
         
     <!-- Message Form Input -->
-    <div class="form-group">
-        <textarea name="message" class="form-control">{{ old('message') }}</textarea>
+    
+    <div class="col-sm-8 p-l-0 p-r-0">
+        <div class="form-group">
+            <textarea name="message" style="height: 62px;" class="form-control">{{ old('message') }}</textarea>
+        </div>
     </div>
 
-    @if($users->count() > 0)
-        <div class="checkbox">
-            @foreach($users as $user)
-                <label title="{{ $user->name }}">
-                    <input type="checkbox" name="recipients[]" value="{{ $user->id }}">{{ $user->name }}
-                </label>
-            @endforeach
-        </div>
-    @endif
-
     <!-- Submit Form Input -->
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary form-control">Submit</button>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <button class="subscribe btn btn-primary btn-lg btn-block" type="submit">Send <i class="fa fa-paper-plane"></i></button>
+        </div>
     </div>
 </form>

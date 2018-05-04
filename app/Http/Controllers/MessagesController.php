@@ -57,8 +57,8 @@ class MessagesController extends Controller
         $users = User::whereNotIn('id', $thread->participantsUserIds($userId))->get();
 
         $thread->markAsRead($userId);
-
-        return view('pages.messages.show-message', compact('thread', 'users'));
+        $threads = Thread::getAllLatest()->get();
+        return view('pages.messages.show-message', compact('thread', 'threads', 'users'));
     }
 
     /**
@@ -66,11 +66,12 @@ class MessagesController extends Controller
      *
      * @return mixed
      */
-    public function create()
+    public function create($id)
     {
         $users = User::where('id', '!=', Auth::id())->get();
+        $send_to = User::find($id);
 
-        return view('pages.messages.create-message', compact('users'));
+        return view('pages.messages.create-message', compact('users', 'send_to'));
     }
 
     /**
