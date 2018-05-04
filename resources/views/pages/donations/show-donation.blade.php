@@ -10,7 +10,7 @@
 <section class="p-b-0">
         <div class="container p-b-20">
         <div class="row">
-        <div class="col-md-5"> <img alt="" src="{{ asset('images/app/gift.png') }}" style="max-width: 400px;"> </div>
+        <div class="col-md-5"> <img alt="" class="p-r-30" src="{{ asset('images/app/gift.png') }}" style="max-width: 400px;"> </div>
         <div class="col-md-7">
         <hr class="space">
         

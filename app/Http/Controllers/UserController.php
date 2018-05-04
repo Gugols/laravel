@@ -20,7 +20,10 @@ class UserController extends Controller
     {
         $id = Auth::user()->id;
         $user = User::find($id);
-        return view('pages.users.user-page')->with(['user'=>$user]);
+        return view('pages.users.user-page')->with([
+            'user'=>$user,
+            'auth_user'=>Auth::user(),
+            ]);
     }
 
     /**
@@ -53,7 +56,10 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('pages.users.user-page')->with(['user'=>$user]);
+        return view('pages.users.user-page')->with([
+            'user'=>$user,
+            'auth_user'=>Auth::user(),
+            ]);
     }
 
     /**

@@ -24,8 +24,10 @@
                                 <i class="fa fa-graduation-cap"></i>
                                 @break @default
                                 <Unknown @endswitch </p>
-                    <a href="#donate" class="btn btn-light btn-outline btn-rounded" data-method="post"
-                    data-disable-with="loading..." data-confirm="Are you sure you want to donate?">Make a donation</a>
+                                @if($user->wallet && $user->id != $auth_user->id)
+                                <a href="{{ route('donations.create', $user->id) }}" class="btn btn-light btn-outline btn-rounded" data-method="GET"
+                    data-disable-with="loading...">Make a donation</a>
+                                @endif
                     </div>
                     <div class="col-md-7">
                     <div class="col-md-6">
