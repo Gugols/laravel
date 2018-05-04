@@ -7,11 +7,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Spatie\Permission\Traits\HasRoles;
 use App\Wallet;
+use Cmgmyr\Messenger\Traits\Messagable;
 
 class User extends Authenticatable
 {
     use Notifiable;
     use HasRoles;
+    use Messagable;
 
     /**
      * The attributes that are mass assignable.

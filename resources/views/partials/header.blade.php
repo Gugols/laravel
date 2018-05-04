@@ -77,8 +77,10 @@
                             <li class="hidden-xs">
                                     <!--shopping cart-->
                                     <div id="shopping-cart">
-                                        <a href="shop-cart.html">
-                                            <span class="shopping-cart-items">8</span>
+                                        <a href="{{ route('messages') }}">
+                                            @if($count = Auth::user()->newThreadsCount() > 0)
+                                        <span class="shopping-cart-items">{{ $count }}</span>
+                                            @endif
     
                                             <i class="fa fa-envelope"></i>
                                         </a>

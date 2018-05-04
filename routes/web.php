@@ -104,3 +104,13 @@ Route::post('/donations', 'DonationController@store')->name('donations.store');
 Route::get('/donations', 'DonationController@index')->name('donations.index');
 Route::get('/donations/{id}', 'DonationController@show')->name('donations.show');
 Route::delete('/donations/{id}/delete', 'DonationController@destroy')->name('donations.destroy');
+
+//////  messages
+
+Route::group(['prefix' => 'messages'], function () {
+    Route::get('/', ['as' => 'messages', 'uses' => 'MessagesController@index']);
+    Route::get('create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+    Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+    Route::get('{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+    Route::put('{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+});
