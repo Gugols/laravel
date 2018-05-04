@@ -101,5 +101,6 @@ Route::post('/charges', 'ChargeController@store')->name('charge.store');
 
 Route::get('/donations/{id}/create', 'DonationController@create')->name('donations.create');
 Route::post('/donations', 'DonationController@store')->name('donations.store');
+Route::get('/donations', 'DonationController@index')->name('donations.index');
 Route::get('/donations/{id}', 'DonationController@show')->name('donations.show');
 Route::delete('/donations/{id}/delete', 'DonationController@destroy')->name('donations.destroy');

@@ -17,7 +17,15 @@ class DonationController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $sent_donations = $user->donations;
+        $received_donations = $user->receivedDonations;
+
+        return view('pages.donations.index-donations')->with([
+            'user'=>$user,
+            'sent_donations'=>$sent_donations,
+            'received_donations'=>$received_donations,
+            ]);
     }
 
     /**
@@ -37,6 +45,15 @@ class DonationController extends Controller
         // no need to donate for yourself
         if($user->id == $id) {
             flash('There is not much sense in donating to yourself :)')->error();
+            return redirect()->route('home');
+        }
+
+        try {
+            $user->wallet->id;
+            $receiver->wallet->id;
+        }
+        catch (\Exception $e) {
+            flash('You or the person you want to donate to doesnt have a wallet!')->error();
             return redirect()->route('home');
         }
 
@@ -118,6 +135,7 @@ class DonationController extends Controller
         }
 
         return view('pages.donations.show-donation')->with([
+            'user'=>$user,
             'donation'=>$donation,
             'donator'=>$donator,
             'receiver'=>$receiver,

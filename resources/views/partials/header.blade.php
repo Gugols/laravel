@@ -68,6 +68,7 @@
                                         <a class="list-entry" href="{{ route('user.index') }}">My profile</a>
                                         <a class="list-entry" href="{{ route('user.edit', Auth::id())}}">Settings</a>
                                         <a class="list-entry" href="{{ route('wallet.index')}}">Wallet</a>
+                                        <a class="list-entry" href="{{ route('donations.index')}}">Donations</a>
                                     </div>
                                         </div>
                                 </li>

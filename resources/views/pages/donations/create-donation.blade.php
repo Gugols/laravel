@@ -76,7 +76,7 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <button class="subscribe btn btn-primary btn-lg btn-block" type="submit" data-method="POST"
-                                            data-disable-with="Deleting...">Send donation</button>
+                                            data-disable-with="Sending...">Send donation</button>
                                         </div>
                                     </div>
                                     <div class="row" style="display:none;">

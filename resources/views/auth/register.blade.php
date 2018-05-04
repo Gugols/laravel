@@ -13,6 +13,8 @@
                                 <br>
                                 <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook">
                                     <i class="fa fa-facebook"></i> Facebook</a>
+                                    <a href="{{ route('login') }}" class="btn btn-light">
+                                       Login</a>
                             </div>
                         </div>
                 </div>

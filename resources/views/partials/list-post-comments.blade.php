@@ -15,7 +15,7 @@
         </a>
         @endcan
         <br>
-        <span class="comment_date">{{ $date->format('M d Y') }}</span>
+        <span class="comment_date">{{ $date->format('d/m/Y') }}</span>
         <div class="text_holder">
             <p> {{ $body }}</p>
         </div>

@@ -24,5 +24,15 @@ function UserHasWallet($id) {
     } catch (Exception $e) {
         return false;
     }
+}
 
+function getUserName($id) {
+    $user = User::find($id);
+    return $user->name;
+}
+
+function getUserNameLink($id) {
+    $user = User::find($id);
+    $link = route('user.show', ['id' => $user->id]);
+    return '<a href="'.$link.'">'.$user->name.'</a>';
 }
