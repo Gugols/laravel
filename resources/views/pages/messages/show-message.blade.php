@@ -1,4 +1,4 @@
-@extends('layouts.main-layout') @section('content') @include('partials.upper-section', array('h1'=>'Full conversation'))
+@extends('layouts.main-layout') @section('content') @include('partials.upper-section', array('h1'=>'Conversing wih ' . $thread->participantsString(Auth::id())))
 
 <div class="container p-t-20">
 <div class="col-xs-12 col-sm-4">
