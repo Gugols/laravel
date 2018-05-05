@@ -87,8 +87,8 @@
                 <h2>{{ $user->name }}'s posts</h2>
                 </div>
                 <div id="blog" class="grid-layout post-3-columns m-b-30 grid-loaded" data-item="post-item">
-                    @foreach ($user->posts->take(3) as $post)
-                        @include('partials.posts-thumbnail-shadow', array('post'=>$post))
+                    @foreach ($posts as $post)
+                        @include('partials.posts-user-thumbnail-shadow', array('post'=>$post))
                     @endforeach
                 </div>
             </div>

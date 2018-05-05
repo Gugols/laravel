@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Image;
+use App\Post;
 
 
 class UserController extends Controller
@@ -56,9 +57,12 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        $posts = Post::where('user_id', $user->id)->orderBy('id', 'DESC')->limit(3)->get();
+
         return view('pages.users.user-page')->with([
             'user'=>$user,
             'auth_user'=>Auth::user(),
+            'posts'=>$posts,
             ]);
     }
 

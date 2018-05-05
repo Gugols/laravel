@@ -17,7 +17,7 @@
                 <a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}
                 </a>
             </h2>
-            <p>{{ substr($post->body,0,160) }}...</p>
+            <p>{{ substr($post->body,0,150) }}...</p>
             <a href="{{ route('posts.show', $post->id) }}" class="item-link">Read More
                 <i class="fa fa-arrow-right"></i>
             </a>
