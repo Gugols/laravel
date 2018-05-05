@@ -21,9 +21,12 @@ class UserController extends Controller
     {
         $id = Auth::user()->id;
         $user = User::find($id);
+        $posts = Post::where('user_id', $user->id)->orderBy('id', 'DESC')->limit(3)->get();
+        
         return view('pages.users.user-page')->with([
             'user'=>$user,
             'auth_user'=>Auth::user(),
+            'posts'=>$posts,
             ]);
     }
 

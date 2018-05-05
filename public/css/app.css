@@ -557,6 +557,18 @@ p {
   height: 200px;
 }
 
+.donate-cta.small hr.space {
+  height: 10px;
+}
+
+.donate-cta.small #donation-cta-img-left {
+  max-width: 300px !important;
+}
+
+.donate-cta.small h1.heading-jumbo {
+  font-size: 30px;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.

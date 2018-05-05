@@ -1,0 +1,18 @@
+// Donation CTA
+.donate-cta {
+    &.small {
+        hr {
+            &.space {
+                height: 10px;
+            }
+        }
+        #donation-cta-img-left {
+            max-width: 300px !important;
+        }
+        h1 {
+            &.heading-jumbo {
+                font-size: 30px;
+            }
+        }
+    }
+}

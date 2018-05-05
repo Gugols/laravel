@@ -17,6 +17,9 @@
                     Delete
                 </a>
                 @endcan
+                <div class="col-xs-12 donate-cta small">
+                        @include('partials.user-footer-donate',  array('user' => $post->user))
+                </div>
                 <div class="seperator">
                     <i class="fa fa-diamond"></i>
                 </div>
