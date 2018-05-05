@@ -27,7 +27,7 @@ class postController extends Controller
         $post->user_id = Auth::id();
         //$path = Storage::putFile('uploads/post_images', $request->file('avatar'));
         //Storage::disk('uploads')->put('/post_images/'.$user->getId() . ".jpg", $avatar_file);
-        if($request->file) {
+        if($request->files) {
           $path = $request->file('image')->store('public/uploads/post_images');
           $post->image = $request->image->hashName();
         }
@@ -61,7 +61,8 @@ class postController extends Controller
         $this->authorize('update', $post);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        if($request->file) {
+        // dd($request->file('image'));
+        if($request->files) {
           $path = $request->file('image')->store('public/uploads/post_images');
           $post->image = $request->image->hashName();
         }

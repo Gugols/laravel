@@ -17,15 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/homedome', 'HomeController@index')->name('homedemo');
-
 ////// posts
 // Show a single post (GET)
-Route::get('/posts/show/{id}', 'PostController@show')->name('posts.show');
+Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
 
 Route::group(['middleware' => ['permission:publish own posts']], function () {
     // Create a new post (GET)
-    Route::get('/posts/new', 'PostController@create');
+    Route::get('/posts/create', 'PostController@create');
     // Create a new post (POST)
     Route::post('/posts', 'PostController@store')->name('posts.store');
 });
