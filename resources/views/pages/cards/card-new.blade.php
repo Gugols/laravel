@@ -22,7 +22,7 @@
                         <div class="row display-tr">
                             <h3 class="panel-title display-td">Card Details</h3>
                             <div class="display-td">                            
-                            <img class="img-responsive pull-right" src="{{ asset('storage/general/cards.png') }}">
+                            <img class="img-responsive pull-right" src="{{ asset('images/app/cards.png') }}">
                             </div>
                         </div>                    
                     </div>

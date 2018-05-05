@@ -1,6 +1,6 @@
 <div class="post-item border shadow">
     <div class="post-item-wrap">
-        <div class="post-image">
+    <div class="post-image" style="background-image: url('@include('partials.randombackground-url')')">
         <a href="{{ route('posts.show', $post->id) }}">
             <img alt="" src="{{ asset('storage/uploads/post_images/'.$post->image) }}">
             </a>

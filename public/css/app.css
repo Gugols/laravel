@@ -548,8 +548,13 @@ p {
   }
 }
 
-#blog .post-item img {
-  max-height: 200px;
+#blog .post-item .post-image {
+  background-repeat: repeat;
+  min-height: 200px;
+}
+
+#blog .post-item .post-image img {
+  height: 200px;
 }
 
 /*!

@@ -1,0 +1,1 @@
+{{ asset('images/app/bg/'.randomPattern()) }}

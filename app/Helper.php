@@ -41,3 +41,14 @@ function getUserDetail($type, $needle, $interest) {
     $user = User::where($type, $needle) -> first();
     return $user->$interest;
 }
+
+function randomPattern() {
+    $patterns = [
+        'spring.png',
+        'light-grey-terrazzo.png',
+        'sun-pattern.png',
+        'tic-tac-toe.png',
+    ];
+
+    return $patterns[array_rand($patterns)];
+}
