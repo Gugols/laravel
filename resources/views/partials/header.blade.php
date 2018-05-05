@@ -127,7 +127,7 @@
                                         <a href="#">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="#">Articles</a>
+                                    <a href="{{ route('posts.index') }}">Articles</a>
                                     </li>                              
                                 </ul>
                             </nav>

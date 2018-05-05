@@ -9,6 +9,21 @@ use Auth;
 
 class postController extends Controller
 {
+
+    public function index() {
+      
+      //$posts = Post::paginate(10);
+      //$posts = $posts->sortByDesc('created_at');
+
+      $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+
+      //dd($posts);
+
+      return view('pages.posts.all-posts')->with([
+          'posts'=>$posts,
+          ]);
+    }
+
     public function create() {
 		  return view('pages.posts.create-post');
     }

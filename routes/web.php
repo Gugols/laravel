@@ -20,6 +20,7 @@ Auth::routes();
 ////// posts
 // Show a single post (GET)
 Route::get('/posts/{id}/show', 'PostController@show')->name('posts.show');
+Route::get('/posts', 'PostController@index')->name('posts.index');
 
 Route::group(['middleware' => ['permission:publish own posts']], function () {
     // Create a new post (POST)
