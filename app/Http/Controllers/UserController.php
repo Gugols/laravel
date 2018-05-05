@@ -66,6 +66,19 @@ class UserController extends Controller
             ]);
     }
 
+    public function showUserPosts($id) {
+        $user = User::find($id);
+        $posts = Post::where('user_id', $user->id)->orderBy('id', 'DESC')->get();
+
+        //dd($posts);
+
+        return view('pages.users.user-posts')->with([
+            'user'=>$user,
+            'auth_user'=>Auth::user(),
+            'posts'=>$posts,
+            ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

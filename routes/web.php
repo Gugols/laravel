@@ -34,6 +34,7 @@ Route::put('/posts/{id}', 'PostController@update')->name('posts.update');
 
 
 Route::put('/user/{id}', 'UserController@update')->name('user.update');
+Route::get('/user/{id}/posts', 'UserController@showUserPosts')->name('user.showUserPosts');
 
 Route::group(['middleware' => ['permission:delete own posts']], function () {
     // Delete post (GET)

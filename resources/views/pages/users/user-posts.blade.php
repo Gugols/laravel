@@ -57,31 +57,8 @@
                 </div>
             </section>
         @endif
-        <section class="p-b-10">
-            <div class="container">
 
-
-                <div class="hr-title hr-long center">
-                    <abbr>In short...</abbr>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <blockquote>
-                            <p>{{ $user->short_description }}</p>
-                        </blockquote>
-                    </div>
-                </div>
-        </section>
-
-        <section class="p-t-0">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>{{ $user->description }}</p>
-            </div>
-        </section>
-
-
-        <section id="section-blog" class="content background-grey">
+        <section id="section-blog" class="content background-grey p-t-10">
             <div class="container">
                 <div class="col-md-10 center text-center m-b-60">
                 <h2>{{ $user->name }}'s posts</h2>
@@ -90,10 +67,6 @@
                     @foreach ($posts as $post)
                         @include('partials.posts-user-thumbnail-shadow', array('post'=>$post))
                     @endforeach
-                </div>
-                <div class="col-xs-12 text-center p-t-10">
-                        <a href="{{ route('user.showUserPosts', $user->id) }}" class="btn btn-lg btn-outline">
-                                See all {{ $user->name }}'s posts</a>
                 </div>
             </div>
         </section>
