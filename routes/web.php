@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.landing');
-})->name('home');
+Route::get('/', 'LandingController@index')->name('home');
 
 Auth::routes();
 

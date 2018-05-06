@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Auth;
 
-class postController extends Controller
+class PostController extends Controller
 {
 
     public function index() {

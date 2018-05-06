@@ -121,6 +121,20 @@
             </div>
             </div>
             </section>
+
+         <!-- Latest Posts -->
+            <section id="section6" class="background-grey p-t-80 p-b-0">
+                    <div class="heading section-title">
+                            <h2>Recent Posts</h2>
+                            <p>The most recent posts made by our contributors.</p>
+                    </div>
+                    <div id="blog" class="grid-layout post-3-columns m-b-30 grid-loaded" data-item="post-item">
+                            @foreach ($posts as $post)
+                                @include('partials.posts-user-thumbnail-shadow', array('post'=>$post
+                            ))
+                            @endforeach
+                        </div>
+            </section>
         
         <!-- Team -->
         <section id="section6" class="background-grey p-t-100 p-b-100">
@@ -257,116 +271,10 @@
         
         <!-- Know more -->
         <section id="section6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 center text-center">
-                        <h4 class="m-b-10">Know More</h4>
-                        <h2>About Our Company</h2>
-                        <p class="lead m-b-60">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.
-                        </p>
+                <div class="heading section-title">
+                        <h2>Student Spotlight</h2>
+                        <p>Our top talent.</p>
                     </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h4 class="m-b-20">We are making progress</h4>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="100" data-delay="0" data-type="%">
-                                <div class="progress-title">HTML5</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="94" data-delay="100" data-type="%">
-                                <div class="progress-title">CSS3</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="89" data-delay="200" data-type="%">
-                                <div class="progress-title">JQUERY</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="78" data-delay="300" data-type="%">
-                                <div class="progress-title">MYSQL</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="75" data-delay="400" data-type="%">
-                                <div class="progress-title">PHP</div>
-                            </div>
-                        </div>
-                        <p class="lead">Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h4 class="m-b-20">Best services around</h4>
-                        <div class="accordion fancy radius clean">
-                            <div class="ac-item ac-active">
-                                <h5 class="ac-title"><i class="fa fa-rocket"></i>Suscipit laboriosam</h5>
-                                <div class="ac-content ac-active">We’re POLO, a creative agency located in the heart of New York city. Suspendisse consectetur fringilla luctus.
-                                    <br />
-                                    <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
-                            </div>
-                            <div class="ac-item">
-                                <h5 class="ac-title"><i class="fa fa-heart"></i>Aliquam voluptatem</h5>
-                                <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                                    <br />
-                                    <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
-                            </div>
-                            <div class="ac-item">
-                                <h5 class="ac-title"><i class="fa fa-shopping-cart"></i>Labore et dolore</h5>
-                                <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                    <br />
-                                    <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h4 class="m-b-20">Latest from Blog</h4>
-                        <div class="post-thumbnail-list">
-                            <div class="post-thumbnail-entry">
-                                <img src="homepages/corporate-v7/images/blog/5.jpg" alt="">
-                                <div class="post-thumbnail-content">
-                                    <a href="#">Suspendisse consectetur fringilla</a>
-                                    <span class="post-date"><i class="fa fa-clock-o"></i> 6m ago</span>
-                                    <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
-                                </div>
-                            </div>
-                            <div class="post-thumbnail-entry">
-                                <img src="homepages/corporate-v7/images/blog/6.jpg" alt="">
-                                <div class="post-thumbnail-content">
-                                    <a href="#">Consectetur adipiscing elit</a>
-                                    <span class="post-date"><i class="fa fa-clock-o"></i> 24h ago</span>
-                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                </div>
-                            </div>
-                            <div class="post-thumbnail-entry">
-                                <img src="homepages/corporate-v7/images/blog/7.jpg" alt="">
-                                <div class="post-thumbnail-content">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                    <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
-                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                </div>
-                            </div>
-                            <div class="post-thumbnail-entry">
-                                <img src="homepages/corporate-v7/images/blog/8.jpg" alt="">
-                                <div class="post-thumbnail-content">
-                                    <a href="#">Fringilla Lorem ipsum dolor sit amet</a>
-                                    <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
-                                    <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
         </section>
         <!-- end: Know more -->
 
