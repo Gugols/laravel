@@ -100,35 +100,7 @@
                             <!-- Footer widget area 3 -->
                             <div class="widget">
                                 <h4>Latest From Our Blog</h4>
-                                <div class="post-thumbnail-list">
-                                    <div class="post-thumbnail-entry">
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Suspendisse consectetur fringilla luctus</a>
-                                            <span class="post-date">
-                                                <i class="fa fa-clock-o"></i> 6m ago</span>
-                                            <span class="post-category">
-                                                <i class="fa fa-tag"></i> Technology</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumbnail-entry">
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Consectetur adipiscing elit</a>
-                                            <span class="post-date">
-                                                <i class="fa fa-clock-o"></i> 24h ago</span>
-                                            <span class="post-category">
-                                                <i class="fa fa-tag"></i> Lifestyle</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumbnail-entry">
-                                        <div class="post-thumbnail-content">
-                                            <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                                            <span class="post-date">
-                                                <i class="fa fa-clock-o"></i> 11h ago</span>
-                                            <span class="post-category">
-                                                <i class="fa fa-tag"></i> Lifestyle</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                @include('pages.posts.posts-small-snippet-list')
                             </div>
                             <!-- end: Footer widget area 3 -->
                         </div>

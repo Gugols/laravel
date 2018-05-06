@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use Illuminate\Support\Facades\View;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +16,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Footer articles
+
+        View::composer('pages.posts.posts-small-snippet-list', function ($view) {
+            $posts = new \App\Repositories\PostRepository;
+            $view->with('posts', $posts->latestPosts(3));
+        });
     }
 
     /**
