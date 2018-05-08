@@ -87,19 +87,19 @@
             <div class="row">
             <div class="col-md-3">
             <div class="text-center">
-            <div class="icon"><i class="fa fa-3x fa-code"></i></div>
-            <div class="counter"> <span data-speed="3000" data-refresh-interval="50" data-to="12416" data-from="600" data-seperator="true">12416</span> </div>
+            <div class="icon"><i class="fa fa-3x fa-user"></i></div>
+            <div class="counter"> <span data-speed="3000" data-refresh-interval="50" data-to="{{ $all_users_count }}" data-from="1" data-seperator="true">{{ $all_users_count }}</span> </div>
             <div class="seperator seperator-small"></div>
-            <p>LINES OF CODE</p>
+            <p>USERS JOINED</p>
             </div>
             </div>
             
             <div class="col-md-3">
             <div class="text-center">
-            <div class="icon"><i class="fa fa-3x fa-coffee"></i></div>
-            <div class="counter"> <span data-speed="4500" data-refresh-interval="23" data-to="365" data-from="100" data-seperator="true">365</span> </div>
+            <div class="icon"><i class="fa fa-3x fa-newspaper-o"></i></div>
+            <div class="counter"> <span data-speed="4500" data-refresh-interval="23" data-to="{{ $all_posts_count }}" data-from="1" data-seperator="true">{{ $all_posts_count }}</span> </div>
             <div class="seperator seperator-small"></div>
-            <p>CUPS OF COFFEE</p>
+            <p>POSTS CREATED</p>
             </div>
             </div>
             <div class="col-md-3">
