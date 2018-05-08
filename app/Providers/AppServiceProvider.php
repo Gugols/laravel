@@ -22,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
             $posts = new \App\Repositories\PostRepository;
             $view->with('posts', $posts->latestPosts(3));
         });
+
+        View::composer('pages.users.users-small-snippet-list', function ($view) {
+            $users = new \App\Repositories\UserRepository;
+            $view->with('users', $users->latestUsers(4));
+        });
     }
 
     /**

@@ -32,8 +32,8 @@
                 <div class="container">
                     <!--Logo-->
                     <div id="logo">
-                    <a href="{{ route('home') }}" class="logo" data-dark-logo="/images/logo-dark.png">
-                            <img src="/images/logo.png" alt="Polo Logo">
+                    <a href="{{ route('home') }}" class="logo" data-dark-logo="/images/white_whole_final.png">
+                            <img src="/images/black_whole_final.png" alt="Maecenas Logo">
                         </a>
                     </div>
                     <!--End: Logo-->
