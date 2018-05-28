@@ -1,0 +1,1 @@
+@include('partials.users-small-snippet-list', ['users'=>$users]);

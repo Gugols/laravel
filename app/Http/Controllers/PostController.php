@@ -93,6 +93,6 @@ class PostController extends Controller
     {
       $post = Post::find($id);
       Post::destroy($id);
-      return redirect()->route('posts.show', ['id' => 50]);
+      return redirect()->route('home');
     }
 }

@@ -23,9 +23,22 @@ class AppServiceProvider extends ServiceProvider
             $view->with('posts', $posts->latestPosts(3));
         });
 
-        View::composer('pages.users.users-small-snippet-list', function ($view) {
+        // Student snippet list
+        View::composer('pages.users.users-students-small-snippet-list', function ($view) {
             $users = new \App\Repositories\UserRepository;
-            $view->with('users', $users->latestUsers(4));
+            $view->with('users', $users->latestUsers(4, 1));
+        });
+
+        // Schools snippet list
+        View::composer('pages.users.users-schools-small-snippet-list', function ($view) {
+            $users = new \App\Repositories\UserRepository;
+            $view->with('users', $users->latestUsers(4, 2));
+        });
+
+        // Companies and Organizations snippet list
+        View::composer('pages.users.users-companies-small-snippet-list', function ($view) {
+            $users = new \App\Repositories\UserRepository;
+            $view->with('users', $users->latestUsers(4, 3));
         });
     }
 

@@ -45,12 +45,6 @@ class CardController extends Controller
     public function store(Request $request)
     {
 
-        // $table->string('card_number');
-        // $table->string('ccExpiryMonth');
-        // $table->string('ccExpiryYear');
-        // $table->string('brand');
-
-
 
         $this->authorize('create', 'App\Card');
         

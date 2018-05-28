@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="heading heading text-left">
-                    <h2>Compangies & Organizations</h2>
+                    <h2>Companies & Organizations</h2>
                     <span class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci.
                     </span>
                     </div>
@@ -107,15 +107,15 @@
             <div class="icon"><i class="fa fa-3x fa-rocket"></i></div>
             <div class="counter"> <span data-speed="3000" data-refresh-interval="12" data-to="114" data-from="50" data-seperator="true">114</span> </div>
             <div class="seperator seperator-small"></div>
-            <p>FINISHED PROJECTS</p>
+            <p>DAYS SINCE LAUNCH</p>
             </div>
             </div>
             <div class="col-md-3">
             <div class="text-center">
             <div class="icon"><i class="fa fa-3x fa-smile-o"></i></div>
-            <div class="counter"> <span data-speed="4550" data-refresh-interval="50" data-to="14825" data-from="48" data-seperator="true">14825</span> </div>
+            <div class="counter"> <span data-speed="4550" data-refresh-interval="50" data-to="2343" data-from="48" data-seperator="true">14825</span> </div>
             <div class="seperator seperator-small"></div>
-            <p>SATISFIED CLIENTS</p>
+            <p>EUR DONATED</p>
             </div>
             </div>
             </div>
@@ -136,18 +136,44 @@
                         </div>
             </section>
         
-        <!-- Team -->
-        <section id="section6" class="background-grey p-t-100 p-b-100">
+        <!-- Students -->
+        <section id="section6" class="background-grey p-t-0 p-b-0">
             <div class="container">
                 <div class="heading section-title">
-                        <h2>Recently joined</h2>
+                        <h2>Recent Students</h2>
                     </div>
-               <div class="row team-members team-members-circle m-b-40">
-                    @include('pages.users.users-small-snippet-list');
+               <div class="row team-members team-members-circle m-b-40 p-b-0">
+                    @include('pages.users.users-students-small-snippet-list');
                 </div>
             </div>
         </section>
-        <!-- end: Team -->
+        <!-- end: Students -->
+
+        <!-- Schools -->
+        <section id="section6" class="background-grey p-t-0 p-b-0">
+            <div class="container">
+                <div class="heading section-title">
+                        <h2>Recent Schools</h2>
+                    </div>
+               <div class="row team-members team-members-circle m-b-40 p-b-0">
+                    @include('pages.users.users-schools-small-snippet-list');
+                </div>
+            </div>
+        </section>
+        <!-- end: Schools -->
+
+        <!-- Companies -->
+        <section id="section6" class="background-grey p-t-0 p-b-0">
+            <div class="container">
+                <div class="heading section-title">
+                        <h2>Recent Companies</h2>
+                    </div>
+               <div class="row team-members team-members-circle m-b-40 p-b-0">
+                    @include('pages.users.users-companies-small-snippet-list');
+                </div>
+            </div>
+        </section>
+        <!-- end: Companies -->
         
         <!-- Know more -->
         <section id="section6">
@@ -158,26 +184,6 @@
         </section>
         <!-- end: Know more -->
 
-        <!-- Subscribe form -->
-        <section class="background-colored text-center p-t-80  p-b-30">
-            <div class="container">
-                <div class="widget clearfix widget-newsletter">
-                    <form class="widget-subscribe-form form-inline" action="include/subscribe-form.php" role="form" method="post">
-                        <h3 class="text-light">Subscribe to our Newsletter</h3>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
-                            <input type="email" aria-required="true" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-                            <span class="input-group-btn">
-											<button type="submit" id="widget-subscribe-submit-button" class="btn btn-light">Subscribe</button>
-										</span>
-                        </div>
-                        <small class="text-light">Stay informed on our latest news!</small>
-                    </form>
-
-                </div>
-            </div>
-        </section>
-        <!-- end: Subscribe form -->
 
 @endsection

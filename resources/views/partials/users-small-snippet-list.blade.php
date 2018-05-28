@@ -7,7 +7,7 @@
         <div class="team-desc">
             <h3>{{ $user->name }}</h3>
             <span>{{ $user->role }}</span>
-            <p>{{\Illuminate\Support\Str::words($user->description, 15, '...')}} </p>
+            <p>{{\Illuminate\Support\Str::words($user->short_description, 15, '...')}} </p>
         </div>
     </div>
 </div>

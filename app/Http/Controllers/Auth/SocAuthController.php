@@ -35,7 +35,7 @@ class SocAuthController extends Controller
         $authUser = $this->findOrCreateUser($user, $provider);
 
         // lets check if user has already created an user profile
-            //if it has one, redirect to Home. If not, redirect tu profile page to create it.
+            //if it has one, redirect to Home. If not, redirect to profile page to create it.
         //dd($authUser);
 
         Auth::login($authUser, true);
