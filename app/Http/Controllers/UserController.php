@@ -66,6 +66,8 @@ class UserController extends Controller
             'user'=>$user,
             'auth_user'=>Auth::user(),
             'posts'=>$posts,
+            //'received_amount'=>5,
+            //'donated_amount'=>$user->donations->sum('amount'),
             ]);
     }
 

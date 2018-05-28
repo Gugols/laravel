@@ -16,3 +16,16 @@
         }
     }
 }
+
+.donation-snippet {
+    font-weight: 300;
+    width: 100%;
+    .donation-snippet-icon {
+        vertical-align: middle;
+        font-size: 90px;
+    }
+    .donation-snippet-text {
+        vertical-align: middle;
+        font-size: 40px;
+    }
+}
